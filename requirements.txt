@@ -1,0 +1,2 @@
+youtube-transcript-api>=1.2.0
+requests[socks]>=2.31.0
