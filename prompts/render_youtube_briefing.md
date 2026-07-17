@@ -13,6 +13,7 @@ The document must:
 - Do not mention, identify, link to, or enumerate sources, videos, creators, channels, transcripts, timestamps, or the process used to gather the material. The page should read as a standalone briefing, not an aggregation report.
 - Do not name sponsors or describe promotional placements. Omit promotional material altogether; retain only any useful idea that can stand on its own, and qualify it appropriately if uncertain.
 - Use visual hierarchy and concise sections so the briefing is useful in a few minutes, with expandable detail only where it materially improves understanding.
+- End with this unobtrusive footer text: `This content is not sponsored.`
 - Be attractive, responsive, and easy to scan using only inline CSS; do not load external fonts, scripts, images, or other assets.
 - Use semantic HTML and accessible colour contrast.
 
