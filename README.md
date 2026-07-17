@@ -47,6 +47,10 @@ export KNOW_TODAY_HTTPS_PROXY="$KNOW_TODAY_HTTP_PROXY"
 
 The script checks the newest video from every configured channel, saves its metadata and transcript, asks the local `codex exec` CLI to create per-video learning notes, then asks Codex to render a timestamped static HTML briefing. All generated material is under `output/youtube/` and is Git-ignored. Re-running skips learning notes already created for the same video; pass `--force` to regenerate them.
 
+## Publish briefings
+
+Public artifacts live in `docs/`, which is intentionally tracked separately from the private generated `output/` directory. GitHub Pages can serve this directory after the repository is public: in the repository's **Settings → Pages**, select **Deploy from a branch**, then choose `main` and the `/docs` folder. The first published briefing is available from `docs/index.html`.
+
 To route through a Raspberry Pi without exposing a public proxy, create a local SSH SOCKS tunnel to the Pi over Tailscale, then use:
 
 ```sh
