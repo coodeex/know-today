@@ -2,7 +2,7 @@
 
 Read every Markdown learning file in `{learnings_dir}`.
 
-Return a complete, self-contained HTML document only. Do not edit files or run commands.
+Read those files with safe, read-only commands if needed. Return a complete, self-contained HTML document only; do not edit files, access any other paths, or run network commands.
 
 The document must:
 

@@ -2,7 +2,7 @@
 
 Read the transcript at `{transcript_path}`.
 
-Return Markdown only. Do not edit files or run commands.
+Read that file with a safe, read-only command if needed. Return Markdown only; do not edit files, access any other paths, or run network commands.
 
 Create a concise, evidence-based briefing with these sections:
 
