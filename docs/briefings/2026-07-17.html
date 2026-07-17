@@ -1,151 +1,219 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daily Video Briefing</title>
-<style>
-  :root {
-    --ink: #172033;
-    --muted: #526078;
-    --line: #d8e0eb;
-    --surface: #ffffff;
-    --canvas: #f4f7fb;
-    --navy: #12365b;
-    --blue: #0b63b6;
-    --amber-bg: #fff4d6;
-    --amber-ink: #704900;
-    --red-bg: #fff0f0;
-    --red-ink: #942a2a;
-    --green-bg: #e9f7ef;
-    --green-ink: #16633b;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--canvas); color: var(--ink);
-    font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  }
-  main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
-  header { margin-bottom: 24px; }
-  h1, h2, h3 { line-height: 1.18; margin: 0; }
-  h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--navy); }
-  h2 { font-size: 1.35rem; color: var(--navy); margin-bottom: 14px; }
-  h3 { font-size: 1.05rem; margin-bottom: 7px; }
-  p { margin: 0 0 12px; }
-  a { color: var(--blue); text-decoration-thickness: 2px; text-underline-offset: 2px; }
-  .eyebrow { color: var(--muted); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .76rem; margin-bottom: 7px; }
-  .lede { color: var(--muted); font-size: 1.08rem; max-width: 78ch; margin-top: 10px; }
-  section { margin-top: 20px; }
-  .card {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
-    padding: 22px; box-shadow: 0 2px 10px rgba(20, 43, 73, .05);
-  }
-  .priority {
-    border-left: 6px solid var(--blue);
-    background: #f7fbff;
-  }
-  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-  .decision { border-top: 3px solid var(--blue); }
-  .label {
-    display: inline-block; border-radius: 999px; padding: 3px 9px;
-    font-size: .76rem; font-weight: 750; margin-bottom: 9px;
-  }
-  .high { background: var(--red-bg); color: var(--red-ink); }
-  .medium { background: var(--amber-bg); color: var(--amber-ink); }
-  .low { background: var(--green-bg); color: var(--green-ink); }
-  ul { margin: 8px 0 0; padding-left: 20px; }
-  li + li { margin-top: 7px; }
-  .videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-  .meta { color: var(--muted); font-size: .91rem; }
-  .notice {
-    border-radius: 9px; padding: 12px 14px; margin-top: 14px;
-    background: var(--amber-bg); color: var(--amber-ink);
-  }
-  .notice strong { color: #513500; }
-  footer { color: var(--muted); font-size: .88rem; margin-top: 22px; }
-  @media (max-width: 760px) {
-    main { padding: 24px 14px 40px; }
-    .grid, .videos { grid-template-columns: 1fr; }
-    .card { padding: 18px; }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — July 17, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main { max-width: 800px; margin: 0 auto; }
+    .card {
+      margin: 14px 0;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.35; }
+    h3 { margin: 0 0 10px; font-size: 15px; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time, .muted { color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      color: #173b87;
+      background: #e9f0ff;
+      border: 1px solid #cbd9fa;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .signal {
+      padding: 10px 12px;
+      margin: 8px 0;
+      border-left: 3px solid var(--accent);
+      background: #f7f9fe;
+      border-radius: 0 8px 8px 0;
+    }
+    .caution { border-left-color: var(--warn); }
+    .opinion { border-left-color: var(--ok); }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+    th, td { padding: 8px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: #f3f6fa; }
+    code { padding: 1px 4px; background: #f3f6fa; border: 1px solid var(--border); border-radius: 6px; font-size: .9em; }
+    pre { overflow: auto; padding: 12px; background: #0b1020; color: #dbe7ff; border-radius: 8px; }
+    a { color: var(--accent); }
+    footer { padding: 4px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
+    @media (max-width: 600px) {
+      body { padding: 16px; }
+      .card { padding: 18px 20px; }
+    }
+  </style>
 </head>
 <body>
-<main>
-  <header>
-    <p class="eyebrow">Daily briefing · two source videos</p>
-    <h1>Executive summary</h1>
-    <p class="lede">The strongest cross-cutting lesson is disciplined iteration: constrain access and scope, test with real users and real environments, then use observed failures to drive the next release. AI-assisted workflows can improve knowledge-work throughput and accelerate prototypes, but they require explicit human review, least-privilege data access, and independent validation of vendor claims.</p>
-  </header>
+  <main>
+    <header class="card">
+      <div class="measure">
+        <h1>Know Today</h1>
+        <time datetime="2026-07-17">July 17, 2026</time>
+      </div>
+    </header>
 
-  <section class="card priority" aria-labelledby="executive-priorities">
-    <h2 id="executive-priorities">Priorities for a senior technology executive</h2>
-    <div class="grid">
-      <article class="card decision">
-        <span class="label high">Priority 1</span>
-        <h3>Approve a bounded productivity pilot</h3>
-        <p>Choose one repeatable workflow—meeting preparation, weekly prioritisation, or communication drafts—and connect only approved read-only sources.</p>
-        <p><strong>Decision:</strong> appoint an owner, define a success metric, and require review before any external message or system change.</p>
-      </article>
-      <article class="card decision">
-        <span class="label high">Priority 2</span>
-        <h3>Set controls before enabling computer use</h3>
-        <p>Browser control and file operations can be useful for reversible, tightly scoped tasks, but access to email, chat, cookies, passwords, and files materially expands the attack and privacy surface.</p>
-        <p><strong>Decision:</strong> prohibit unattended sends, purchases, credential handling, and bulk file changes; use isolated test data and proposed-change review.</p>
-      </article>
-      <article class="card decision">
-        <span class="label medium">Priority 3</span>
-        <h3>Institutionalise vertical-slice testing</h3>
-        <p>Early prototypes should be evaluated on the target device and with intended users. Functional demos can still fail on controls, clarity, pacing, reliability, and edge cases.</p>
-        <p><strong>Decision:</strong> require acceptance criteria covering usability, reliability, security, and measurable user outcomes before expansion.</p>
-      </article>
-    </div>
-  </section>
+    <section class="card" aria-label="Topics">
+      <div class="tags">
+        <span class="tag">AI agents</span>
+        <span class="tag">Coding workflows</span>
+        <span class="tag">Browser automation</span>
+        <span class="tag">Open-weight models</span>
+        <span class="tag">On-device AI</span>
+        <span class="tag">Credential brokering</span>
+        <span class="tag">Agent CLIs</span>
+        <span class="tag">Prototype testing</span>
+        <span class="tag">AI infrastructure</span>
+      </div>
+    </section>
 
-  <section class="card" aria-labelledby="implications">
-    <h2 id="implications">Strategic and operating implications</h2>
-    <ul>
-      <li><strong>Strategy:</strong> fund small workflow-specific experiments rather than broad “autonomous assistant” deployments. Reuse well-organised context to reduce repeated briefing effort.</li>
-      <li><strong>Engineering productivity:</strong> target recurring annoyances with a defined baseline, such as time spent preparing meetings or triaging work. Treat initial output as a draft and instrument iteration.</li>
-      <li><strong>Security and vendor risk:</strong> apply least privilege, read-only defaults, data classification, auditability, and human approval gates. Product demonstrations do not substitute for security review, contractual controls, or independent testing.</li>
-      <li><strong>Data:</strong> connect the minimum necessary email, calendar, chat, document, and task sources. Confirm retention, model-training use, tenant isolation, and access revocation before scaling.</li>
-      <li><strong>Reliability:</strong> test end-to-end in production-like conditions. Include blocking defects, unclear system feedback, and input-device mismatch in release criteria—not merely whether a demo completes.</li>
-    </ul>
-    <div class="notice"><strong>Uncertainty:</strong> both sources rely on auto-generated transcripts. Specific feature descriptions, names, timings, and demonstrations may be incomplete or outdated.</div>
-  </section>
+    <section class="card">
+      <h2>👀 Keep an eye on</h2>
+      <ul>
+        <li>Browser-integrated coding agents can turn a rendered UI element into a scoped code-change request, tightening the inspect–edit–verify loop.</li>
+        <li>Agent usefulness is increasingly determined by its harness—browser, terminal, connected apps, schedules, credentials, and approvals—not just the underlying model.</li>
+        <li>Service-specific CLIs and connected-app flows are emerging as more deliberate agent interfaces than brittle screen automation, including actions that can reach checkout.</li>
+        <li>One-bit phone-sized models make private, fast assistance more plausible for bounded work, while still falling short of dependable coding or complex generation.</li>
+        <li>Parallel disposable prototypes are becoming a practical way to resolve uncertain product choices before committing to a full build.</li>
+        <li>Large open-weight releases offer tuning and hosting optionality, but multi-terabyte footprints keep serious deployment firmly in cloud-infrastructure territory.</li>
+      </ul>
+    </section>
 
-  <section aria-labelledby="source-videos">
-    <h2 id="source-videos">Source videos</h2>
-    <div class="videos">
-      <article class="card">
-        <p class="eyebrow">Video 1</p>
-        <h3><a href="https://www.youtube.com/watch?v=MDy_b9F7oUc">AI workspace, connected context, computer use, and coding workflows</a></h3>
-        <p class="meta">Focus: assisted knowledge work and workflow automation.</p>
-        <ul>
-          <li>Use focused, read-only context; avoid connecting more data than a task needs.</li>
-          <li>Keep generated emails and chat messages as reviewed drafts, not autonomous sends.</li>
-          <li>Use weekly triage to surface commitments and delegation candidates, then validate deadlines and ownership.</li>
-          <li>For file operations, start with duplicate folders and explicit move/rename rules.</li>
-        </ul>
-        <div class="notice"><strong>Promotional claim:</strong> the video is sponsored by OpenAI. Claimed capability, speed, quality, token use, and autonomy are demonstrations or anecdotes, not independently verified benchmarks.</div>
-      </article>
+    <section class="card">
+      <h2>🧭 What changed</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Development</th>
+            <th>Practical implication</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Reported in-editor browser inspection and element annotation</td>
+            <td>Use live UI feedback to scope small fixes precisely, then review the resulting diff like any other change.</td>
+          </tr>
+          <tr>
+            <td>Reported scheduled and event-triggered agent actions</td>
+            <td>Move from one-off prompts to owned routines, such as a weekly review or an inbox-triggered draft queue.</td>
+          </tr>
+          <tr>
+            <td>Credential-mediated login for agents</td>
+            <td>Authentication friction may drop without exposing raw passwords, but permission boundaries and action logs become essential.</td>
+          </tr>
+          <tr>
+            <td>Conversational prototype generation with parallel workstreams</td>
+            <td>Generate alternatives for mechanics, flows, or visual direction independently, test them, and integrate only the selected path.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-      <article class="card">
-        <p class="eyebrow">Video 2</p>
-        <h3><a href="https://www.youtube.com/watch?v=QtsOHdJgOJQ">Iterative AI-assisted game design and playtesting</a></h3>
-        <p class="meta">Focus: prototyping, user testing, and product-quality feedback loops.</p>
-        <ul>
-          <li>Prototype uncertain choices separately, then commit after testing.</li>
-          <li>Convert player feedback into requirements: distinctive interactions, readable signals, and differentiated encounters.</li>
-          <li>Test on the actual target input device early; a mobile-style control scheme failed for desktop play.</li>
-          <li>Prioritise blocking bugs and controls before adding content, procedural features, or polish.</li>
-        </ul>
-        <div class="notice"><strong>Promotional claim:</strong> this is a demonstration by the application’s creator. Assertions about voice interpretation, parallel work, and polished output are not independent validation; several proposed features remain plans rather than demonstrated results.</div>
-      </article>
-    </div>
-  </section>
+    <section class="card">
+      <h2>🛠️ Practical workflows</h2>
 
-  <footer>Recommended near-term outcome: one low-risk, read-only workflow pilot with documented data boundaries, mandatory review gates, and a short evidence-based evaluation.</footer>
-</main>
+      <div class="signal">
+        <h3>Make delegation read-only first</h3>
+        <p>Give an assistant only the calendar, documents, messages, or repository context required for one output, then require review before it sends, moves, renames, or purchases anything.</p>
+      </div>
+
+      <div class="signal">
+        <h3>Prototype before implementation</h3>
+        <p>Split uncertain decisions into independent experiments—interaction, visual direction, input model, or error handling—rather than issuing a single “build the product” request.</p>
+      </div>
+
+      <div class="signal">
+        <h3>Specify platform constraints early</h3>
+        <p>State target device, input method, accessibility needs, performance expectations, and acceptance checks before generation; retrofitting them produces avoidable churn.</p>
+      </div>
+
+      <div class="signal caution">
+        <h3>Keep transaction paths gated</h3>
+        <p>For any workflow that can log in, alter files, contact people, or check out, define least-privilege credentials, confirmation points, spending limits, and an audit trail.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>💭 Opinions worth testing</h2>
+
+      <div class="signal opinion">
+        <p><strong>Opinion:</strong> Open weights are not automatically the better choice when a model still needs expensive cloud hosting; compare capability, cost, latency, and control on your own workload before treating openness as the deciding feature.</p>
+      </div>
+
+      <div class="signal opinion">
+        <p><strong>Opinion:</strong> Domain experts may contribute more directly to prototype definition through voice and conversational feedback, but an engineer still needs to validate requirements, architecture, and test coverage.</p>
+      </div>
+
+      <div class="signal caution">
+        <p><strong>Prediction:</strong> Distributed compute tied to home energy systems could become a useful capacity layer, but current evidence is too early to treat it as an enterprise infrastructure plan.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>⚠️ Caveats</h2>
+      <ul>
+        <li>Several reported releases, model claims, integrations, and benchmark results need primary documentation and independent testing before they inform purchasing or architecture decisions.</li>
+        <li>Small demos show iteration speed, not proof of maintainability, security, production reliability, or safe autonomy.</li>
+        <li>Browser control and connected accounts can expose private data, violate service terms, or execute costly actions unless the environment is deliberately prepared and monitored.</li>
+        <li>Local-model privacy claims depend on confirming where inference actually runs and what telemetry, files, prompts, and tool calls leave the device.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>✨ Try this today</h2>
+
+      <div class="signal">
+        <h3>Run a three-option UI experiment</h3>
+        <p>Create three small branches or Git worktrees for one ambiguous interface decision, ask an LLM to implement one constrained variant in each, and compare them in separate local app instances. The outcome should be a decision based on runnable behavior rather than preference for a mockup.</p>
+      </div>
+
+      <div class="signal">
+        <h3>Build a read-only weekly brief</h3>
+        <p>Provide an LLM with a deliberately limited set of your notes, tasks, and calendar exports, then ask for priorities, conflicts, and questions to resolve. The outcome should be a reviewable draft that helps you plan without changing any source system.</p>
+      </div>
+
+      <div class="signal">
+        <h3>Test prototype-first agent work</h3>
+        <p>Choose one uncertain feature and request two disposable implementations with explicit acceptance checks for platform, inputs, and failure states. The outcome should reveal which assumptions need product decisions before you invest in a fuller implementation.</p>
+      </div>
+
+      <div class="signal">
+        <h3>Set up an action boundary</h3>
+        <p>For a local assistant workflow, separate research and drafting from any file mutation or external action, requiring a visible proposed-change list before approval. The outcome should be a reusable control pattern for later browser, credential, or CLI integrations.</p>
+      </div>
+    </section>
+
+    <footer>None of this content is sponsored.</footer>
+  </main>
 </body>
 </html>
