@@ -37,7 +37,13 @@ export KNOW_TODAY_HTTPS_PROXY="$KNOW_TODAY_HTTP_PROXY"
 
 ## Generate a YouTube briefing
 
-Add handles to `subscriptions.json`, then route only this run through the Raspberry Pi tunnel:
+Subscriptions are private local configuration. Create `subscriptions.json` once from the tracked example, then replace the placeholder with the channel handles you want to follow:
+
+```sh
+cp subscriptions.example.json subscriptions.json
+```
+
+`subscriptions.json` is Git-ignored and must never be committed. Then route only this run through the Raspberry Pi tunnel:
 
 ```sh
 export KNOW_TODAY_HTTP_PROXY='socks5h://127.0.0.1:1080'

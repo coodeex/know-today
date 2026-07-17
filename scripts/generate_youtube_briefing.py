@@ -33,6 +33,10 @@ def proxy_settings() -> dict[str, str] | None:
 
 
 def load_channels(path: Path) -> list[str]:
+    if not path.is_file():
+        raise FileNotFoundError(
+            f"{path} does not exist. Copy subscriptions.example.json to subscriptions.json, then add your channel handles."
+        )
     data = json.loads(path.read_text(encoding="utf-8"))
     channels = data.get("youtube_channels") if isinstance(data, dict) else None
     if not isinstance(channels, list) or not channels or not all(isinstance(item, str) and item.strip() for item in channels):
