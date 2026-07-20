@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from html import escape
 import json
 import os
 import re
@@ -166,6 +167,7 @@ def write_pages_index(index_path: Path, briefing_name: str, briefing_date: str) 
       <p class=\"date\">{briefing_date}</p>
       <h2>Read the latest briefing</h2>
     </a>
+    <p><a href=\"briefings/\">Browse all briefings</a></p>
   </main>
 </body>
 </html>
@@ -174,16 +176,94 @@ def write_pages_index(index_path: Path, briefing_name: str, briefing_date: str) 
     )
 
 
+def briefing_label(filename: str) -> str:
+    """Turn a stable public filename into a readable archive label."""
+    stem = Path(filename).stem
+    for pattern, label in (("%Y-%m-%dT%H-%M-%SZ", "%B %-d, %Y at %-H:%M UTC"), ("%Y-%m-%d", "%B %-d, %Y")):
+        try:
+            return datetime.strptime(stem, pattern).strftime(label)
+        except ValueError:
+            continue
+    return stem
+
+
+def write_briefings_index(index_path: Path) -> None:
+    """Create a public archive containing every published briefing page."""
+    briefing_files = sorted(
+        (path for path in index_path.parent.glob("*.html") if path.name != index_path.name),
+        key=lambda path: path.name,
+        reverse=True,
+    )
+    items = "\n".join(
+        f'      <li><a href="{escape(path.name)}">{escape(briefing_label(path.name))}</a></li>' for path in briefing_files
+    ) or "      <li>No briefings have been published yet.</li>"
+    index_path.write_text(
+        f"""<!doctype html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"utf-8\">
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+  <title>All briefings · Know Today</title>
+  <style>
+    :root {{ color-scheme: light; --ink: #16202a; --muted: #556372; --line: #d9e1ea; --canvas: #f6f8fb; --surface: #fff; --blue: #1d4ed8; }}
+    * {{ box-sizing: border-box; }}
+    body {{ margin: 0; background: var(--canvas); color: var(--ink); font: 15px/1.55 -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; }}
+    main {{ max-width: 800px; margin: 0 auto; padding: 56px 24px; }}
+    h1 {{ margin: 0; font-size: 28px; }}
+    p {{ color: var(--muted); }}
+    a {{ color: var(--blue); text-underline-offset: 3px; }}
+    ul {{ margin: 24px 0 0; padding: 0; list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }}
+    li + li {{ border-top: 1px solid var(--line); }}
+    li a {{ display: block; padding: 15px 18px; text-decoration: none; }}
+    li a:hover {{ background: #f8faff; }}
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href=\"../\">← Latest briefing</a></p>
+    <h1>All briefings</h1>
+    <p>Published Know Today reports, newest first.</p>
+    <ul>
+{items}
+    </ul>
+  </main>
+</body>
+</html>
+""",
+        encoding="utf-8",
+    )
+
+
+def add_archive_link(briefing_path: Path) -> None:
+    """Ensure every public briefing has a reliable link back to the archive."""
+    html = briefing_path.read_text(encoding="utf-8")
+    if "data-know-today-archive" in html:
+        return
+    navigation = (
+        '<nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;'
+        'font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">'
+        '<a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>'
+    )
+    if "<body>" in html:
+        html = html.replace("<body>", f"<body>{navigation}", 1)
+    else:
+        html = f"{navigation}{html}"
+    briefing_path.write_text(html, encoding="utf-8")
+
+
 def publish_to_pages(briefing_path: Path, docs_dir: Path, briefing_name: str, briefing_date: str) -> None:
     """Copy the new artifact to Pages, then commit and push only Pages files."""
     public_briefing = docs_dir / "briefings" / briefing_name
     public_briefing.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(briefing_path, public_briefing)
+    add_archive_link(public_briefing)
     write_pages_index(docs_dir / "index.html", briefing_name, briefing_date)
+    archive_index = public_briefing.parent / "index.html"
+    write_briefings_index(archive_index)
 
-    subprocess.run(["git", "add", "--", str(public_briefing), str(docs_dir / "index.html")], cwd=PROJECT_ROOT, check=True)
+    subprocess.run(["git", "add", "--", str(public_briefing), str(docs_dir / "index.html"), str(archive_index)], cwd=PROJECT_ROOT, check=True)
     staged = subprocess.run(
-        ["git", "diff", "--cached", "--quiet", "--", str(public_briefing), str(docs_dir / "index.html")],
+        ["git", "diff", "--cached", "--quiet", "--", str(public_briefing), str(docs_dir / "index.html"), str(archive_index)],
         cwd=PROJECT_ROOT,
     )
     if staged.returncode == 0:
@@ -253,7 +333,7 @@ def main() -> int:
         generated_at = datetime.now(timezone.utc)
         timestamp = generated_at.strftime("%Y-%m-%dT%H-%M-%SZ")
         briefing_date = f"{generated_at:%B} {generated_at.day}, {generated_at:%Y}"
-        public_briefing_name = f"{generated_at:%Y-%m-%d}.html"
+        public_briefing_name = f"{timestamp}.html"
         briefing_path = args.output_dir / "briefings" / f"{timestamp}.html"
         render_briefing(run_learnings_dir, briefing_path, briefing_date)
         print(f"Briefing: {briefing_path}")

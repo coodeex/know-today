@@ -14,6 +14,7 @@ Your purpose is to create a concise daily signal report for someone close to tec
 4. Add only the additional short sections needed to make the briefing logically useful. Good choices include `🧭 What changed`, `🛠️ Practical workflows`, `💭 Opinions worth testing`, and `⚠️ Caveats`. Keep each item concise and skimmable; use bullets, compact cards, or a compact table instead of long prose.
 5. End with a section titled `✨ Try this today`. Include two to five small, concrete experiments that are newly practical with the technology discussed. Every experiment must be possible for an interested person with a laptop, access to an LLM, and time to try it. Explain the setup and the expected outcome in one or two short sentences each. Make grounded connections across the learning files when useful—for example, using Git worktrees to run several local app instances on separate ports while separate agents plan, implement, and review changes. Do not claim that an agent can perform work unsupervised or safely without an appropriately prepared environment, tools, access, review, and patience.
 6. End the page with this exact unobtrusive footer text: `None of this content is sponsored.`
+7. Include one small navigation link labelled `← All briefings` that points to `index.html`. Keep it unobtrusive and place it outside the main report content.
 
 ## Editorial rules
 

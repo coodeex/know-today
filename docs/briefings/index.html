@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Know Today</title>
+  <title>All briefings · Know Today</title>
   <style>
     :root { color-scheme: light; --ink: #16202a; --muted: #556372; --line: #d9e1ea; --canvas: #f6f8fb; --surface: #fff; --blue: #1d4ed8; }
     * { box-sizing: border-box; }
@@ -12,21 +12,20 @@
     h1 { margin: 0; font-size: 28px; }
     p { color: var(--muted); }
     a { color: var(--blue); text-underline-offset: 3px; }
-    .briefing { display: block; margin-top: 24px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: inherit; }
-    .briefing:hover { border-color: var(--blue); }
-    .date { margin: 0 0 5px; font-size: .82rem; font-weight: 700; }
-    h2 { margin: 0; font-size: 18px; }
+    ul { margin: 24px 0 0; padding: 0; list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+    li + li { border-top: 1px solid var(--line); }
+    li a { display: block; padding: 15px 18px; text-decoration: none; }
+    li a:hover { background: #f8faff; }
   </style>
 </head>
 <body>
   <main>
-    <h1>Know Today</h1>
-    <p>Concise, evidence-aware technology briefings.</p>
-    <a class="briefing" href="briefings/2026-07-17.html">
-      <p class="date">July 17, 2026</p>
-      <h2>Read the latest briefing</h2>
-    </a>
-    <p><a href="briefings/">Browse all briefings</a></p>
+    <p><a href="../">← Latest briefing</a></p>
+    <h1>All briefings</h1>
+    <p>Published Know Today reports, newest first.</p>
+    <ul>
+      <li><a href="2026-07-17.html">July 17, 2026</a></li>
+    </ul>
   </main>
 </body>
 </html>
