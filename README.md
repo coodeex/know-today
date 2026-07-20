@@ -51,7 +51,11 @@ export KNOW_TODAY_HTTPS_PROXY="$KNOW_TODAY_HTTP_PROXY"
 .venv/bin/python scripts/generate_youtube_briefing.py
 ```
 
-The script checks the newest video from every configured channel, saves its metadata and transcript, asks the local `codex exec` CLI to create per-video learning notes, then asks Codex to render a timestamped static HTML briefing. All generated material is under `output/youtube/` and is Git-ignored. Re-running skips learning notes already created for the same video; pass `--force` to regenerate them.
+The script checks the newest video from every configured channel and stores private check state in `output/youtube/state.json` (which is Git-ignored). If every latest video has already been seen, it records a `no-new-sources` check and exits: it does not call Codex, create HTML, change GitHub Pages, commit, or push.
+
+When at least one channel has a new video, the same command saves its metadata and transcript, asks the local `codex exec` CLI to create per-video learning notes, renders one static HTML briefing from only those new sources, copies it to `docs/briefings/YYYY-MM-DD.html`, updates the Pages homepage, and runs `git commit` plus `git push origin main`. It stages only those two public Pages files, leaving any other local work untouched. All generated source material and the state file remain under Git-ignored `output/youtube/`.
+
+Pass `--force` to treat each channel's current latest video as new. Pass `--no-publish` to generate a briefing without touching GitHub Pages or Git.
 
 ## Publish briefings
 
