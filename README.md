@@ -67,3 +67,7 @@ To route through a Raspberry Pi without exposing a public proxy, create a local 
 export KNOW_TODAY_HTTP_PROXY='socks5h://127.0.0.1:1080'
 export KNOW_TODAY_HTTPS_PROXY="$KNOW_TODAY_HTTP_PROXY"
 ```
+
+## Daily schedule
+
+On the configured VM, Cron runs `scripts/run_daily_briefing.sh` every day at `09:00` in the machine's local Finnish timezone. The wrapper restores the private Tailscale SSH SOCKS tunnel on port `1080` when needed, then runs the normal briefing command. Its output is appended to the ignored file `output/youtube/cron.log`.
