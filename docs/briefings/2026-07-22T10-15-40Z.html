@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — July 22, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main, nav, footer { max-width: 800px; margin: 0 auto; }
+    nav { margin-bottom: 14px; font-size: 13px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      margin: 14px 0;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+    h3 { margin: 0 0 10px; font-size: 15px; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time { display: block; margin-top: 2px; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      border: 1px solid #bfd0ed;
+      border-radius: 999px;
+      background: #edf4ff;
+      color: #173d78;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .signal { color: var(--ok); font-weight: 650; }
+    .caution { color: var(--warn); font-weight: 650; }
+    .opinion { color: var(--warn); font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: #f3f6fa; }
+    code {
+      padding: 1px 4px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #f3f6fa;
+      font-size: .9em;
+    }
+    pre {
+      overflow: auto;
+      padding: 12px;
+      border-radius: 8px;
+      background: #0b1020;
+      color: #dbe7ff;
+    }
+    footer { padding: 10px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
+    @media (max-width: 560px) {
+      body { padding: 16px; }
+      .card { padding: 18px 22px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <nav aria-label="Briefing navigation"><a href="index.html">← All briefings</a></nav>
+
+  <main>
+    <header class="card">
+      <div class="measure">
+        <h1>Know Today</h1>
+        <time datetime="2026-07-22">July 22, 2026</time>
+      </div>
+    </header>
+
+    <section class="card" aria-label="Topics">
+      <div class="measure tags">
+        <span class="tag">AI agents</span>
+        <span class="tag">Developer workflows</span>
+        <span class="tag">Reusable skills</span>
+        <span class="tag">Model routing</span>
+        <span class="tag">Verification loops</span>
+        <span class="tag">Human review</span>
+        <span class="tag">Context isolation</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>👀 Keep an eye on</h2>
+        <ul>
+          <li>Reusable agent skills can turn requirements intake, project setup, and recurring checks into versioned workflow components.</li>
+          <li>Per-task model and context routing makes parallel agent work more affordable when routine checks do not need a full project history.</li>
+          <li>Reliable automation increasingly means pairing execution with explicit pass/fail verification, run history, and bounded retries.</li>
+          <li>Separate producer and reviewer agents can reduce correlated mistakes when both work from clear acceptance criteria.</li>
+          <li>Human approval gates remain essential before publishing, spending money, changing production systems, or taking other irreversible actions.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>🛠️ Practical workflows</h2>
+        <table>
+          <thead>
+            <tr><th>Pattern</th><th>Useful implementation</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Scripts plus judgment</td>
+              <td>Move stable fetch, transform, and validation steps into tested scripts; leave interpretation and exception handling to the LLM.</td>
+            </tr>
+            <tr>
+              <td>Context boundaries</td>
+              <td>Use separate sessions and folders for unrelated work, then give each agent only the files and criteria it needs.</td>
+            </tr>
+            <tr>
+              <td>Skill hardening</td>
+              <td>Record recurring edge cases and failed assumptions in the workflow itself, then review that list as the process evolves.</td>
+            </tr>
+            <tr>
+              <td>Structured planning</td>
+              <td>Have the agent ask focused questions before work begins, especially around constraints, success criteria, and ownership.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>💭 Opinions worth testing</h2>
+        <p><span class="opinion">Opinion:</span> The useful unit of agent work is a loop, not a prompt: execute, verify, record the result, then retry only within clear limits.</p>
+        <p>This should influence whether a team invests first in acceptance criteria and observability rather than collecting ever-larger prompt templates.</p>
+        <p><span class="opinion">Opinion:</span> “Middle-to-middle” workflows—human framing, agent execution, human validation—are more dependable than fully autonomous end-to-end operation.</p>
+        <p>This favors designing review checkpoints around costly downstream errors instead of removing people from the process.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>⚠️ Caveats</h2>
+        <ul>
+          <li><span class="caution">Needs verification:</span> Reported speed gains, cost savings, and product capabilities are anecdotal or may change; confirm current behavior and policy before standardising a workflow.</li>
+          <li><span class="caution">Risk control:</span> Auto-approval, broad tool access, retries, and concurrent agents can compound cost and impact, so start with approval pauses and spending limits.</li>
+          <li><span class="caution">Practical limit:</span> An execution loop is only as trustworthy as its verifier; vague success criteria merely automate ambiguity.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>✨ Try this today</h2>
+        <h3>1. Build one bounded project-start skill</h3>
+        <p>Write a short reusable instruction that asks five requirements questions, creates a local checklist, and stops for approval. Expected outcome: less repeated setup prompting and a clearer handoff into implementation.</p>
+
+        <h3>2. Split a small task into producer and reviewer passes</h3>
+        <p>Ask one LLM session to draft a change plan and another fresh session to review it against three acceptance criteria. Expected outcome: gaps become visible before you touch files or run commands.</p>
+
+        <h3>3. Extract a deterministic step</h3>
+        <p>Choose a repeated task such as formatting, test selection, or file inventory, and replace the conversational instruction with a tested local command. Expected outcome: faster, more repeatable agent runs with less context spent on mechanics.</p>
+
+        <h3>4. Add a verifier before a retry</h3>
+        <p>For one laptop-scale automation, define a concrete check such as “tests pass and the expected file exists,” log the result, and allow only one manual retry. Expected outcome: you learn whether the workflow is measurable before increasing its autonomy.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>None of this content is sponsored.</footer>
+</body>
+</html>
