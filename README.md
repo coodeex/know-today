@@ -70,4 +70,12 @@ export KNOW_TODAY_HTTPS_PROXY="$KNOW_TODAY_HTTP_PROXY"
 
 ## Daily schedule
 
-On the configured VM, Cron runs `scripts/run_daily_briefing.sh` every day at `09:00` in the machine's local Finnish timezone. The wrapper restores the private Tailscale SSH SOCKS tunnel on port `1080` when needed, then runs the normal briefing command. Its output is appended to the ignored file `output/youtube/cron.log`.
+Install the scheduler with:
+
+```sh
+scripts/run_daily_briefing.sh --install-service
+```
+
+On macOS this creates a LaunchAgent that invokes the one-shot checker every 15 minutes and at login. The checker runs the briefing once per local calendar day after `09:00` Finnish time, so it recovers after sleep, reboot, or a temporary network failure without rerunning a successful day. It restores the private Tailscale SSH SOCKS tunnel on port `1080` when needed.
+
+Run one immediate check with `scripts/run_daily_briefing.sh --once`. Logs are written to `~/Library/Logs/know-today/`; the state file is private and Git-ignored under `output/youtube/`.
