@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — July 24, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .shell { max-width: 800px; margin: 0 auto; }
+    .back {
+      display: inline-block;
+      margin: 0 0 14px 2px;
+      color: var(--accent);
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .back:hover { text-decoration: underline; }
+    main > * {
+      max-width: 800px;
+      margin: 0 0 14px;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+    h3 { margin: 0 0 10px; font-size: 15px; line-height: 1.35; }
+    p { max-width: 700px; margin: 8px 0; }
+    ul, ol { max-width: 700px; margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time { color: var(--muted); font-size: 14px; }
+    a { color: var(--accent); }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #17448b;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .cards { display: grid; gap: 10px; max-width: 700px; }
+    .item {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fbfcfe;
+    }
+    .item p { margin: 3px 0 0; }
+    .label { color: var(--warn); font-weight: 700; }
+    .caution {
+      border-left: 3px solid var(--warn);
+      padding-left: 12px;
+    }
+    code {
+      padding: 1px 5px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #f3f6fa;
+      font-size: 0.9em;
+    }
+    footer {
+      max-width: 700px;
+      margin: 4px auto 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    @media (max-width: 560px) {
+      body { padding: 16px; }
+      main > * { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <div class="shell">
+    <a class="back" href="index.html">← All briefings</a>
+
+    <main>
+      <header>
+        <h1>Know Today</h1>
+        <time datetime="2026-07-24">July 24, 2026</time>
+      </header>
+
+      <section aria-label="Topics">
+        <div class="tags">
+          <span class="tag">AI agents</span>
+          <span class="tag">Prototype-driven development</span>
+          <span class="tag">Developer workflows</span>
+          <span class="tag">State machines</span>
+          <span class="tag">Product discovery</span>
+          <span class="tag">Agent context management</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>👀 Keep an eye on</h2>
+        <ul>
+          <li>Executable prototypes are becoming a practical planning artifact for ambiguous product behavior, not merely a late-stage demo.</li>
+          <li>Generating deliberately different UI or interaction variants exposes choices such as filtering, grouping, and reset behavior that prose specifications hide.</li>
+          <li>Small terminal harnesses can make difficult state transitions testable before a service or workflow is productionized.</li>
+          <li>Keeping a prototype on a disposable branch gives later implementation work a concrete reference while preserving a clean path to discard it.</li>
+          <li>High-fidelity agent work has a real context and token cost, so it is best reserved for questions that discussion cannot settle reliably.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🧭 What changed</h2>
+        <div class="cards">
+          <article class="item">
+            <h3>Prototype the unknowns, not the whole roadmap</h3>
+            <p>Use a short-lived working artifact to answer named questions about an interaction, data flow, or state model; retain the decision record even if the code is discarded.</p>
+          </article>
+          <article class="item">
+            <h3>Compare behavior instead of debating descriptions</h3>
+            <p>Ask for a few meaningfully different approaches, run them in the relevant application context, then choose based on observed behavior and constraints.</p>
+          </article>
+          <article class="item">
+            <h3>Separate discovery from implementation</h3>
+            <p>One work item can establish scope and assumptions, while another produces the prototype that tests them; this keeps uncertainty visible instead of burying it in a large ticket.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>🛠️ Practical workflows</h2>
+        <ul>
+          <li>For a complex feature, write down three to five unanswered questions before asking an LLM to build anything.</li>
+          <li>Run prototypes where their real dependencies and surrounding UI can reveal integration friction, but isolate data, access, and rollout paths first.</li>
+          <li>Use a CLI simulator for domain logic when the important uncertainty is transition order, retries, invalid states, or recovery behavior.</li>
+          <li>When continuing a long agent session, preserve decisions and test results in compact notes rather than relying on the full conversation history.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>💭 Opinions worth testing</h2>
+        <div class="cards">
+          <article class="item">
+            <h3><span class="label">Opinion:</span> Spec-first is often overused</h3>
+            <p>A working prototype may resolve interaction uncertainty faster than ever-more-detailed prompts or requirements. Test this on work where feedback depends on seeing the behavior, not just reading it.</p>
+          </article>
+          <article class="item">
+            <h3><span class="label">Opinion:</span> Prototype-to-production can be an easier handoff</h3>
+            <p>A prototype carries decisions and sometimes reusable code, but its value depends on architecture, tests, security requirements, and disciplined cleanup; measure rework avoided before making it policy.</p>
+          </article>
+          <article class="item">
+            <h3><span class="label">Prediction:</span> Visual exploration may regain importance</h3>
+            <p>Better agent connections to design and canvas tools could make wireframes more useful again. Treat this as a direction to monitor, not as a broadly proven capability.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>⚠️ Caveats</h2>
+        <ul class="caution">
+          <li>Reported gains are practitioner experience, not comparative evidence that the workflow will fit every codebase.</li>
+          <li>Prototype code can conceal weak tests, unsafe assumptions, and production-readiness gaps even when it looks convincing.</li>
+          <li>Trying changes on a live route requires prepared isolation, access controls, rollback, review, and patience; do not expose real users or data casually.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>✨ Try this today</h2>
+        <div class="cards">
+          <article class="item">
+            <h3>Build three versions of one awkward interaction</h3>
+            <p>Choose a small feature with unclear filtering, empty-state, or selection behavior and ask an LLM for three intentionally distinct implementations. Run each locally and record which behavior answers the real user question best.</p>
+          </article>
+          <article class="item">
+            <h3>Make a state-machine playground</h3>
+            <p>Describe a troublesome workflow to an LLM and have it create a small local CLI harness with valid and invalid transitions. Drive edge cases manually and turn the surprising cases into production tests.</p>
+          </article>
+          <article class="item">
+            <h3>Use worktrees for parallel prototype review</h3>
+            <p>Create separate Git worktrees for a proposed implementation, a competing variant, and a review branch, then run local instances on separate ports. This keeps agent-assisted changes from sharing a working directory while you compare behavior.</p>
+          </article>
+          <article class="item">
+            <h3>Time-box a prototype handoff</h3>
+            <p>Give an LLM a narrowly scoped prototype task and a disposable branch, then ask it to leave a short decision log and cleanup list. Compare the time to reach a reviewable implementation with your normal spec-first approach.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>None of this content is sponsored.</footer>
+  </div>
+</body>
+</html>
