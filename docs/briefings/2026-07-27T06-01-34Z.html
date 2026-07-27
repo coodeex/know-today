@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — July 27, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .shell { max-width: 800px; margin: 0 auto; }
+    .back { display: inline-block; margin: 0 0 14px 4px; color: var(--accent); font-size: 14px; text-decoration: none; }
+    .back:hover { text-decoration: underline; }
+    .card {
+      margin: 14px 0;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.35; }
+    h3 { margin: 0 0 10px; font-size: 15px; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time { color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      color: #173e88;
+      background: #eaf1ff;
+      border: 1px solid #cbdcff;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .signal { color: var(--ok); font-weight: 650; }
+    .caution { color: var(--warn); font-weight: 650; }
+    a { color: var(--accent); }
+    code {
+      padding: 1px 5px;
+      background: #f1f4f7;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: .9em;
+    }
+    footer { margin: 18px 4px 0; color: var(--muted); font-size: 13px; }
+    @media (max-width: 580px) {
+      body { padding: 16px; }
+      .card { padding: 18px 22px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <div class="shell">
+    <a class="back" href="index.html">← All briefings</a>
+
+    <main aria-label="Daily technology briefing">
+      <header class="card">
+        <div class="measure">
+          <h1>Know Today</h1>
+          <time datetime="2026-07-27">July 27, 2026</time>
+        </div>
+      </header>
+
+      <section class="card" aria-label="Topics">
+        <div class="tags">
+          <span class="tag">AI agents</span>
+          <span class="tag">Agent orchestration</span>
+          <span class="tag">Developer workflows</span>
+          <span class="tag">Context compaction</span>
+          <span class="tag">Secret management</span>
+          <span class="tag">MVP validation</span>
+          <span class="tag">LLM cost control</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>👀 Keep an eye on</h2>
+          <ul>
+            <li>Coordinator-and-worker agent setups are becoming practical when every worker leaves inspectable files and a concise handoff.</li>
+            <li>Interactive architecture proposals and clickable wireframes can turn agent output into a reviewable decision before code or cloud spend begins.</li>
+            <li>Server-side context compaction may make hours-long agent sessions workable, but only if important state lives outside the prompt.</li>
+            <li>Just-in-time, command-aware credential approval is becoming essential as agents receive DNS, cloud, and deployment access.</li>
+            <li>End-to-end acceptance tests expose the gap between a convincing mock and a working deployed product.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>🛠️ Practical workflows</h2>
+          <ul>
+            <li><span class="signal">Use a manager/worker split:</span> keep one visible coordinator for scope and decisions, then delegate bounded research, implementation, and verification work.</li>
+            <li>Start with a plain-language brief, but convert ambiguity into explicit choices such as budget, environment count, and deferred features.</li>
+            <li>Make review artifacts first-class outputs: a short decision record, diagram, or prototype is easier to challenge than a long generated plan.</li>
+            <li>Set an acceptance gate early, such as a real sign-in flow against a deployed test backend, rather than treating a simulated screen as proof.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>💭 Opinions worth testing</h2>
+          <ul>
+            <li><strong>Opinion:</strong> smaller, cheaper models can handle many engineering tasks if difficult work has a clear escalation path; test this by task type instead of assigning every worker the premium model.</li>
+            <li><strong>Opinion:</strong> constant tool-call watching is less useful than a calm overview with drill-down controls; the decision is whether operators can still intervene quickly when work drifts.</li>
+            <li><strong>Prediction:</strong> authorization design will become a core agent-platform concern as software agents gain access to real infrastructure; invest early in scoped permissions and audit trails.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>⚠️ Caveats</h2>
+          <ul>
+            <li><span class="caution">Verify product and model claims independently:</span> reported capabilities, pricing, context behavior, and names may be incomplete or inaccurate.</li>
+            <li>Claims about long-session reliability and model efficiency are anecdotal, so benchmark them against your own repositories, budgets, and failure modes.</li>
+            <li>Do not give an agent broad plaintext secrets or unattended production access; use scoped credentials, explicit approval, and human review.</li>
+            <li>Browser debugging, DNS changes, and cloud deployment are high-impact actions that need stricter controls than a prototype workflow.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>✨ Try this today</h2>
+          <h3>Run a three-role change</h3>
+          <p>Give one LLM a small feature brief, then use separate sessions for research, implementation, and review; require each to write a short handoff file. The outcome should be a clearer record of assumptions and a focused review queue.</p>
+
+          <h3>Make an acceptance test before coding</h3>
+          <p>Choose one real user journey—such as sign-in, file upload, or payment sandbox—and define the observable success condition. You should quickly discover which proposed work is merely interface polish versus necessary integration.</p>
+
+          <h3>Compare model tiers by task</h3>
+          <p>Ask a lower-cost model and a stronger model to plan the same bounded repository change, then review accuracy, unnecessary complexity, and time spent correcting them. The result is a practical routing rule instead of a blanket model preference.</p>
+
+          <h3>Prototype a safe deployment request</h3>
+          <p>Have an LLM draft the exact infrastructure actions and permissions needed for a disposable test environment, then reduce each permission to the narrowest scope. The outcome is a reusable approval checklist before any real credentials are introduced.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>None of this content is sponsored.</footer>
+  </div>
+</body>
+</html>
