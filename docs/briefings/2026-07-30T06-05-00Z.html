@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily technology briefing</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .shell { max-width: 800px; margin: 0 auto; }
+    nav { margin: 0 0 14px; font-size: 14px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      margin: 14px 0;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    header.card { margin-top: 0; }
+    h1 { font-size: 22px; line-height: 1.25; margin: 0; }
+    h2 { font-size: 18px; line-height: 1.3; margin: 0 0 10px; }
+    h3 { font-size: 15px; margin: 0 0 10px; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time { display: block; margin-top: 2px; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      border: 1px solid #bdd0ee;
+      border-radius: 999px;
+      background: #eaf1ff;
+      color: #163c82;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .label {
+      display: inline-block;
+      margin-right: 6px;
+      color: var(--warn);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+    .risk { color: var(--bad); }
+    .experiment + .experiment {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .experiment strong { color: var(--accent); }
+    footer {
+      max-width: 700px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    @media (max-width: 560px) {
+      body { padding: 16px; }
+      .card { padding: 18px 22px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <div class="shell">
+    <nav aria-label="Briefing navigation"><a href="index.html">← All briefings</a></nav>
+
+    <main>
+      <header class="card">
+        <div class="measure">
+          <h1>Know Today</h1>
+          <time datetime="2026-07-30">July 30, 2026</time>
+        </div>
+      </header>
+
+      <section class="card" aria-label="Topics">
+        <div class="measure tags">
+          <span class="tag">AI context</span>
+          <span class="tag">Agent guardrails</span>
+          <span class="tag">Model review</span>
+          <span class="tag">Developer workflows</span>
+          <span class="tag">Knowledge bases</span>
+          <span class="tag">Prompt maintenance</span>
+          <span class="tag">Approval policies</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>👀 Keep an eye on</h2>
+          <ul>
+            <li>Reusable, narrowly scoped skills are becoming a practical layer between always-on instructions and one-off prompts.</li>
+            <li>Source-constrained answering modes are worth testing where internal consistency matters more than broad model knowledge.</li>
+            <li>A second model can provide a more useful critique gate for consequential plans and changes than self-review alone.</li>
+            <li>Agent permissions are best designed around reversibility, with human approval required for one-way actions.</li>
+            <li>Instructions, skills, and retrieval content need ownership and periodic cleanup as they accumulate.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>🛠️ Practical workflows</h2>
+          <ul>
+            <li><strong>Keep global guidance small:</strong> use it to route work to the relevant domain skill and reference material.</li>
+            <li><strong>Make skill boundaries explicit:</strong> state both when a skill applies and when it should defer to a more specific workflow.</li>
+            <li><strong>Ask for dissent by contract:</strong> require an agent to surface assumptions, alternatives, and failure modes before it acts on a plan.</li>
+            <li><strong>Audit context monthly:</strong> remove stale rules, merge duplicates, and split folders whose contents have become too broad.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>💭 Opinions worth testing</h2>
+          <p><span class="label">Opinion</span>Generic model output often reflects missing or poorly structured context; the useful decision is to improve reusable context architecture before endlessly tuning individual prompts.</p>
+          <p><span class="label">Opinion</span>Models may default to agreeable answers, so independent critique should be designed into high-impact workflows rather than assumed.</p>
+          <p><span class="label">Prediction</span>Context will decay as an AI workflow evolves; treat its rules and knowledge as maintainable operational assets.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>⚠️ Caveats</h2>
+          <ul>
+            <li><span class="label risk">Verify</span>Automatic skill routing and cross-model integration behavior should be validated in the current tools before production use.</li>
+            <li><span class="label risk">Caution</span>Multiple agents do not guarantee independent judgment if they receive the same incomplete context or flawed source material.</li>
+            <li><span class="label risk">Measure</span>Compare constrained and unconstrained answers for accuracy, coverage, and user usefulness before enforcing a knowledge-base-only mode.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>✨ Try this today</h2>
+          <div class="experiment">
+            <strong>Build a two-skill router.</strong>
+            Create one general writing skill and one narrowly scoped support-reply skill, with explicit exclusions in each. Test ten representative requests and note where routing remains ambiguous.
+          </div>
+          <div class="experiment">
+            <strong>Run a source-constrained comparison.</strong>
+            Give an LLM a small set of internal notes and ask the same operational question with and without a “use only this material” constraint. The expected outcome is a clear trade-off between breadth and traceable consistency.
+          </div>
+          <div class="experiment">
+            <strong>Add a critique pass to a small code change.</strong>
+            Have one model propose a change, then give the diff and acceptance criteria to another model to identify risks and missing tests. Review both outputs yourself before applying anything.
+          </div>
+          <div class="experiment">
+            <strong>Classify an automation’s actions.</strong>
+            List its possible actions as reversible or irreversible, then add an approval checkpoint before the irreversible group. The expected outcome is a simpler, more defensible permission boundary.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>None of this content is sponsored.</footer>
+  </div>
+</body>
+</html>
