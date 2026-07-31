@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — July 31, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .wrap { max-width: 800px; margin: 0 auto; }
+    nav { margin: 0 0 14px; font-size: 13px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      margin: 14px 0;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.35; }
+    h3 { margin: 0 0 10px; font-size: 15px; }
+    p { margin: 8px 0; }
+    time { color: var(--muted); font-size: 14px; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      border: 1px solid #bcd0f8;
+      border-radius: 999px;
+      background: #edf3ff;
+      color: #173d8d;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: #f3f6fa; }
+    .label { color: var(--warn); font-weight: 700; }
+    .caution { color: var(--bad); }
+    code {
+      padding: 1px 5px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #f3f6fa;
+      font-size: .9em;
+    }
+    pre {
+      overflow: auto;
+      padding: 12px;
+      border-radius: 8px;
+      background: #0b1020;
+      color: #dbe7ff;
+    }
+    footer { color: var(--muted); font-size: 13px; text-align: center; }
+    @media (max-width: 560px) {
+      body { padding: 16px; }
+      .card { padding: 18px 22px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <div class="wrap">
+    <nav aria-label="Briefing navigation"><a href="index.html">← All briefings</a></nav>
+
+    <main>
+      <header class="card">
+        <div class="measure">
+          <h1>Know Today</h1>
+          <time datetime="2026-07-31">July 31, 2026</time>
+        </div>
+      </header>
+
+      <section class="card" aria-label="Topics">
+        <div class="tags">
+          <span class="tag">AI agents</span>
+          <span class="tag">Agent planning</span>
+          <span class="tag">Issue trackers</span>
+          <span class="tag">Developer workflows</span>
+          <span class="tag">Prototyping</span>
+          <span class="tag">Technical specs</span>
+          <span class="tag">Human review</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>👀 Keep an eye on</h2>
+        <ul>
+          <li>Issue trackers can act as durable, inspectable memory when an initiative outgrows a single agent session.</li>
+          <li>Separating research, prototype, decision, external-action, and implementation tickets makes uncertainty visible instead of burying it in chat history.</li>
+          <li>A dependency-aware “frontier” of actionable tickets can keep parallel agent work from starting before its inputs exist.</li>
+          <li>Generated specifications are more useful when they retain links back to the decisions and experiments that shaped them.</li>
+          <li>Prototype checkpoints are the practical counterweight to agent-assisted planning turning into a rigid upfront plan.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>🛠️ Practical workflow</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Useful output</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Map the initiative</td>
+              <td>Create a parent decision map with a clear destination, open questions, evidence, and blockers.</td>
+            </tr>
+            <tr>
+              <td>Reduce uncertainty</td>
+              <td>Run bounded research, small prototypes, and human discussions as separate tickets rather than presumed implementation tasks.</td>
+            </tr>
+            <tr>
+              <td>Advance the frontier</td>
+              <td>Open a fresh agent session only for tickets whose dependencies are resolved, then write findings back to the map.</td>
+            </tr>
+            <tr>
+              <td>Implement with traceability</td>
+              <td>Generate implementation tickets from settled decisions and preserve links to the underlying rationale for review and recovery.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>💭 Opinions worth testing</h2>
+        <ul>
+          <li><span class="label">Opinion:</span> Persistent planning state may matter more for ambitious agent work than making a single prompt or session longer; test this on work with genuine cross-cutting dependencies.</li>
+          <li><span class="label">Opinion:</span> Specifications can be temporary destination documents once code and decision history are reliable; retain them where audit, onboarding, contracts, or operations require durable documentation.</li>
+          <li><span class="label">Opinion:</span> Frequent prototypes keep a decision map grounded in product feedback; use them before committing to architecture that is costly to reverse.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>⚠️ Caveats</h2>
+        <ul>
+          <li class="caution">The demonstrated workflow and its tooling claims are anecdotal, with no comparative benchmarks, cost data, failure rates, or security analysis.</li>
+          <li>Verify tracker integrations, access controls, synchronization behavior, stale-decision handling, and maintenance status before putting sensitive project state into an agent workflow.</li>
+          <li>External actions and coordination still need explicit ownership and human review; ticket structure does not make an agent independently safe or authorized.</li>
+          <li>For a small, well-scoped change, the planning overhead can outweigh the benefit of a durable map.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>✨ Try this today</h2>
+        <h3>Build a decision map for one fuzzy feature</h3>
+        <p>Create a parent ticket and five child tickets covering research, a prototype, a decision, a dependency, and implementation. Ask an LLM to identify blockers and expected evidence; the outcome should be a plan you can inspect and revise without reopening the original conversation.</p>
+
+        <h3>Prototype before choosing an architecture</h3>
+        <p>Pick one unresolved technical choice and make two minimal prototypes, each with a success criterion. Have an LLM summarize the observed trade-offs into the decision ticket; the outcome should be a decision supported by concrete behavior rather than preference.</p>
+
+        <h3>Run parallel changes with isolated worktrees</h3>
+        <p>Create separate Git worktrees for two unblocked prototype tickets and run local instances on different ports. Give separate LLM sessions narrowly scoped prompts and review the resulting diffs yourself; the outcome should be faster comparison without agents sharing a working directory.</p>
+
+        <h3>Test spec traceability</h3>
+        <p>Generate a short implementation spec from your decision map, then deliberately ask an LLM a question the spec does not answer. The outcome should reveal whether links to the original decision tickets provide enough context to resolve ambiguity.</p>
+      </section>
+    </main>
+
+    <footer>None of this content is sponsored.</footer>
+  </div>
+</body>
+</html>
