@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — August 3, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .wrap { max-width: 800px; margin: 0 auto; }
+    .back {
+      display: inline-block;
+      margin: 0 0 14px 2px;
+      color: var(--accent);
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .back:hover { text-decoration: underline; }
+    .card {
+      max-width: 800px;
+      margin: 0 0 14px;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+    h3 { margin: 0 0 10px; font-size: 15px; line-height: 1.35; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time, .muted { color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      border: 1px solid #cddbf4;
+      border-radius: 999px;
+      background: #edf3ff;
+      color: #193d88;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .signal { color: var(--ok); font-weight: 650; }
+    .caution { color: var(--warn); font-weight: 650; }
+    .risk { color: var(--bad); font-weight: 650; }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: #f3f6fa; }
+    code {
+      padding: 1px 5px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #f3f6fa;
+      font-size: .9em;
+    }
+    pre {
+      overflow: auto;
+      padding: 12px;
+      border-radius: 8px;
+      background: #0b1020;
+      color: #dbe7ff;
+    }
+    footer { padding: 3px 2px 0; color: var(--muted); font-size: 13px; }
+    @media (max-width: 560px) {
+      body { padding: 16px; }
+      .card { padding: 18px 22px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← All briefings</a>
+
+    <main>
+      <header class="card">
+        <div class="measure">
+          <h1>Know Today</h1>
+          <time datetime="2026-08-03">August 3, 2026</time>
+        </div>
+      </header>
+
+      <section class="card" aria-label="Topics">
+        <div class="tags">
+          <span class="tag">AI agents</span>
+          <span class="tag">Reusable skills</span>
+          <span class="tag">Tool permissions</span>
+          <span class="tag">Workflow automation</span>
+          <span class="tag">Agent governance</span>
+          <span class="tag">Regression testing</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>👀 Keep an eye on</h2>
+          <ul>
+            <li>Reusable agent skills turn a successful interactive run into a repeatable procedure that can be improved with later corrections.</li>
+            <li>Read-only aggregation across calendars, mail, and workspaces is a practical first agent deployment because it reduces action risk while exposing useful context.</li>
+            <li>Time-zone mistakes, missed tasks, and missing links are not edge cases: capture them as regression cases before trusting a recurring briefing.</li>
+            <li>Sharing skills or plugins makes workflow quality portable, but also makes ownership, review, versioning, and rollback operational requirements.</li>
+            <li>Connector scopes matter more than chat polish when an agent can reach files, communications, or task systems.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>🧭 What changed</h2>
+          <table>
+            <thead>
+              <tr><th>Pattern</th><th>Practical implication</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Do a task, distill it into a skill, reuse it, then feed failures back.</td>
+                <td>Treat good AI runs as versioned operating procedures, with clear acceptance criteria.</td>
+              </tr>
+              <tr>
+                <td>Skills and tool connections may be packaged and distributed separately.</td>
+                <td>A shared workflow needs a named owner and a controlled release path, not just a useful prompt.</td>
+              </tr>
+              <tr>
+                <td>Agents can combine planning, tool use, and workspace access.</td>
+                <td>Review filesystem and connector permissions as carefully as you would application credentials.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>🛠️ Practical workflows</h2>
+          <ul>
+            <li><span class="signal">Start read-only:</span> assemble a daily brief or weekly status view before allowing an agent to edit records or send messages.</li>
+            <li>Define permission tiers: read by default, explicit confirmation for writes, and no delete capability unless there is a narrow, reviewed need.</li>
+            <li>Keep correction examples beside the procedure: prioritisation rules, preferred links, date handling, omissions, and formatting are all testable behavior.</li>
+            <li>Measure baseline cycle time, error rate, and review burden so claimed productivity gains can be evaluated against the current process.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>💭 Opinions worth testing</h2>
+          <ul>
+            <li><strong>Opinion:</strong> Delegating to an agent like a new hire is more productive than treating it purely as a chatbot; test this by comparing a documented recurring workflow with ad hoc prompting.</li>
+            <li><strong>Prediction:</strong> Teams will move from personal assistance to redesigned processes whose output grows with model usage; use this to examine bottlenecks, not to assume linear savings or reduced staffing.</li>
+            <li><strong>Opinion:</strong> A few recurring skills can remove substantial busywork; treat that as a hypothesis and include setup, oversight, and rework in the measurement.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>⚠️ Caveats</h2>
+          <ul>
+            <li><span class="caution">Verify product behavior independently:</span> availability, portability, automatic skill selection, and version-control claims may vary by plan and environment.</li>
+            <li><span class="risk">Connected data raises material access risk:</span> confirm tenant controls, audit logs, retention, sharing boundaries, and least-privilege support before a wider rollout.</li>
+            <li>Productivity and cost examples are anecdotal; they may omit integration work, review time, and error remediation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>✨ Try this today</h2>
+          <h3>Build a read-only personal brief</h3>
+          <p>Give an LLM a small exported set of calendar items, tasks, and selected messages, then ask for a fixed briefing format with links and time-zone rules. The outcome should reveal which context is useful before you connect live systems.</p>
+
+          <h3>Turn one good run into a checklist</h3>
+          <p>Complete a recurring task interactively, then save the final instructions, inputs, output shape, and acceptance checks in a Markdown file. Run it again on different data and add every correction as a regression case.</p>
+
+          <h3>Run a permission review</h3>
+          <p>List every tool an agent would need for one workflow and classify each as read, write, or delete. The expected outcome is a narrower pilot scope with explicit approval points for consequential actions.</p>
+
+          <h3>Compare ad hoc prompting with a procedure</h3>
+          <p>Perform the same briefing twice: once from a fresh prompt and once from your saved checklist. Track omissions, editing time, and consistency to see whether the procedure is earning its maintenance cost.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>None of this content is sponsored.</footer>
+  </div>
+</body>
+</html>
