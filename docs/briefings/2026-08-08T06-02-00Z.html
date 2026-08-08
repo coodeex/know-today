@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — August 8, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .shell { max-width: 800px; margin: 0 auto; }
+    nav { max-width: 700px; margin: 0 auto 14px; font-size: 13px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    main { display: grid; gap: 14px; }
+    .card {
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+    h3 { margin: 0 0 10px; font-size: 15px; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time, .muted { color: var(--muted); }
+    time { font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      display: inline-block;
+      padding: 3px 9px;
+      border: 1px solid #bfd0ef;
+      border-radius: 999px;
+      background: #edf3ff;
+      color: #193b75;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .signal { color: var(--ok); font-weight: 650; }
+    .caution { color: var(--warn); font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: #f3f6fa; }
+    code {
+      padding: 1px 4px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #f3f6fa;
+      font-size: .9em;
+    }
+    footer { max-width: 700px; margin: 18px auto 0; color: var(--muted); font-size: 13px; }
+    @media (max-width: 560px) {
+      body { padding: 16px; }
+      .card { padding: 18px 22px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <div class="shell">
+    <nav aria-label="Briefing navigation"><a href="index.html">← All briefings</a></nav>
+
+    <main>
+      <header class="card">
+        <div class="measure">
+          <h1>Know Today</h1>
+          <time datetime="2026-08-08">August 8, 2026</time>
+        </div>
+      </header>
+
+      <section class="card" aria-label="Topics">
+        <div class="tags">
+          <span class="tag">Coding agents</span>
+          <span class="tag">Agent evaluation</span>
+          <span class="tag">Workflow automation</span>
+          <span class="tag">AI containment</span>
+          <span class="tag">Generative video</span>
+          <span class="tag">Open-weight models</span>
+          <span class="tag">API-first workflows</span>
+          <span class="tag">Media provenance</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>👀 Keep an eye on</h2>
+        <ul>
+          <li>Reported screen-and-audio skill recording could turn demonstrated work into reusable automations, making explicit decision criteria more valuable than recorded clicks.</li>
+          <li>Terminal coding agents are converging on a common workflow, so task-level cost, latency, diff quality, and intervention rate matter more than a single benchmark.</li>
+          <li>Tool-using agents need default-deny network access, scoped credentials, audit logs, and approval gates because sandbox mistakes can become external actions.</li>
+          <li>Highly directed video generation is becoming practical through many reference inputs and timeline controls, but coherence failures and cost still limit volume use.</li>
+          <li>Generative features tied to real places need misuse testing and a rapid rollback path before broad release.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>🛠️ Practical workflows</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Pattern</th>
+              <th>Useful implementation detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Record a process</td>
+              <td>Narrate why a choice is correct, its exceptions, and rejected alternatives; preserve the policy, not merely the UI path.</td>
+            </tr>
+            <tr>
+              <td>Compose automation</td>
+              <td>Break work into small skills with explicit inputs, outputs, owners, and failure behavior before adding an orchestration layer.</td>
+            </tr>
+            <tr>
+              <td>Generate and check</td>
+              <td>Pair every generator with a rubric using good and bad examples, then require evidence for each pass or fail decision.</td>
+            </tr>
+            <tr>
+              <td>Choose a model</td>
+              <td>Separate frontier cloud reasoning, self-hosted cloud deployment, and lightweight local tasks; open weights do not make a multi-trillion-parameter model locally practical.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>💭 Opinions worth testing</h2>
+        <ul>
+          <li><strong>Opinion:</strong> Teaching an agent to evaluate quality may produce more durable value than teaching it to generate output, because acceptance criteria travel across tasks better than a long prompt.</li>
+          <li><strong>Opinion:</strong> Video demonstrations can transfer tacit, visual judgment better than written instructions alone, while written specifications remain necessary for permissions and governance.</li>
+          <li><strong>Prediction:</strong> Teams that capture how reviewers think—not just how operators click—will get more useful automation from recorded workflows.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>⚠️ Caveats</h2>
+        <ul>
+          <li><span class="caution">Verify before adopting:</span> reported product availability, pricing, integrations, benchmarks, and security behavior may be incomplete, stale, or inaccurately described.</li>
+          <li>A workflow can appear correct while breaking semantics, such as replacing spreadsheet formulas with static values; test fresh data, permissions, side effects, and idempotency.</li>
+          <li>Claims about incidents, rollbacks, and consumer-agent capabilities need independent confirmation before they inform policy or architecture.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>✨ Try this today</h2>
+        <h3>Build a reviewer before a generator</h3>
+        <p>Choose one small artifact such as a pull-request summary or spreadsheet update, give an LLM two good and two bad examples, and ask it to produce an evidence-linked checklist. The outcome should be a review rubric you can run manually before trusting generation.</p>
+
+        <h3>Run a two-agent coding comparison</h3>
+        <p>Give two coding agents the same bounded repository task in separate working copies, with tests and a fixed budget. Compare passing tests, diff readability, elapsed time, and how often you had to intervene; review all changes before merging.</p>
+
+        <h3>Turn a stable routine into atomic steps</h3>
+        <p>Document a repeatable task as three to five units with inputs, outputs, and an explicit stop condition, then ask an LLM to draft an API-first implementation. The outcome should reveal which steps are safely automatable and which still need human judgment.</p>
+
+        <h3>Test a media brief, not a prompt</h3>
+        <p>Create a short video brief with reference images, a timing plan, and a defined acceptance checklist, then generate only a few candidates. You will learn whether controllability and usable-clip cost fit the work better than headline demo quality.</p>
+      </section>
+    </main>
+
+    <footer>None of this content is sponsored.</footer>
+  </div>
+</body>
+</html>
