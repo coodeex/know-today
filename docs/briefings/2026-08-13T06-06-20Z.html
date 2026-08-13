@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily briefing — August 13, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main, .back { display: block; max-width: 800px; margin: 0 auto; }
+    .back {
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .back:hover { color: var(--accent); text-decoration: underline; }
+    .card {
+      margin: 14px 0;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+    h3 { margin: 0 0 10px; font-size: 15px; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time, .muted, footer { color: var(--muted); }
+    time { display: block; font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      border: 1px solid #bfd0f8;
+      border-radius: 999px;
+      background: #edf3ff;
+      color: #173b87;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .signal { color: var(--ok); font-weight: 650; }
+    .caution { color: var(--warn); font-weight: 650; }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: #f3f6fa; }
+    code {
+      padding: 1px 5px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #f3f6fa;
+      font-size: .9em;
+    }
+    footer { max-width: 700px; margin-top: 4px; font-size: 13px; }
+    @media (max-width: 560px) {
+      body { padding: 14px; }
+      .card { padding: 18px 22px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <a class="back" href="index.html">← All briefings</a>
+
+  <main>
+    <header class="card">
+      <div class="measure">
+        <h1>Know Today</h1>
+        <time datetime="2026-08-13">August 13, 2026</time>
+      </div>
+    </header>
+
+    <section class="card" aria-label="Topics">
+      <div class="tags">
+        <span class="tag">Coding agents</span>
+        <span class="tag">Browser testing</span>
+        <span class="tag">Game prototyping</span>
+        <span class="tag">Agent handoffs</span>
+        <span class="tag">Model evaluation</span>
+        <span class="tag">Product judgment</span>
+        <span class="tag">Version control</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>👀 Keep an eye on</h2>
+      <ul>
+        <li>Coding agents can now reportedly build a playable, asset-free 3D vertical slice and iterate against browser screenshots, shifting the bottleneck toward evaluation and design judgment.</li>
+        <li>A versioned <code>design.md</code> or <code>STATUS.md</code> gives a new agent enough context to continue work without re-explaining the codebase from scratch.</li>
+        <li>Browser execution catches failures that static code review misses, including broken controls, camera clipping, unclear navigation, and unreachable content.</li>
+        <li>Choosing one model per development phase may outperform standardising on one agent for scaffolding, debugging, visual polish, and targeted fixes.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🛠️ Practical workflows</h2>
+      <table>
+        <thead>
+          <tr><th>Workflow</th><th>Practical use</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Brief → runnable slice</td><td>Use a detailed product brief to test an interaction loop before investing in a full asset or engineering pipeline.</td></tr>
+          <tr><td>Run and inspect</td><td>Require the agent to launch the app, execute checks, capture screenshots, and compare results with explicit acceptance criteria.</td></tr>
+          <tr><td>Checkpoint before handoff</td><td>Commit working state before switching sessions or models, so a misguided change is cheap to reverse.</td></tr>
+          <tr><td>Human product review</td><td>Reserve playtesting and UX review for affordances, pacing, visual distinction, and whether fixes actually improve the experience.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>💭 Opinions worth testing</h2>
+      <ul>
+        <li><strong>Opinion:</strong> AI is becoming a strong implementation multiplier, but experienced design, QA, art direction, and prioritisation remain the work that makes a prototype worth shipping.</li>
+        <li><strong>Prediction:</strong> Most people will still choose curated software and games over generating every detail themselves; this supports treating generated experiences as an additional format, not a replacement for polished products.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>⚠️ Caveats</h2>
+      <ul>
+        <li><span class="caution">Reported capability:</span> Timing, model performance, code volume, and quality claims are anecdotal and need task-specific verification.</li>
+        <li>Agent-reported fixes can be wrong; visual changes and balancing decisions need a fresh run plus human review.</li>
+        <li>A code-generated prototype does not establish production quality, licensing suitability, accessibility, performance, or maintainability.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>✨ Try this today</h2>
+      <h3>1. Run a two-agent handoff</h3>
+      <p>Ask one LLM to scaffold a tiny browser app, then commit it and give a second LLM a concise <code>STATUS.md</code> with architecture, known defects, and acceptance checks. The outcome should reveal whether the document preserves enough intent for a focused follow-up change.</p>
+
+      <h3>2. Make visual verification mandatory</h3>
+      <p>Pick a small UI or game prototype and have an LLM run it locally, take screenshots, and list observed failures before proposing fixes. Expect to find issues that are invisible in the source, such as layout overflow, unclear controls, or broken interaction paths.</p>
+
+      <h3>3. Benchmark by development phase</h3>
+      <p>Give two LLMs the same narrowly scoped debugging task and separately compare them on a greenfield scaffold or UI refinement task. The result is a practical model map for your own workflow instead of a single vague “best model” ranking.</p>
+
+      <h3>4. Test an interaction loop before polishing</h3>
+      <p>Describe a compact interactive concept in a detailed prompt and ask an LLM to make a runnable vertical slice with no external assets. Use a short human test session to decide whether the core loop deserves further engineering and design time.</p>
+    </section>
+
+    <footer>None of this content is sponsored.</footer>
+  </main>
+</body>
+</html>
