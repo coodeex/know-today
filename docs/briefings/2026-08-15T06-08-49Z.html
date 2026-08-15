@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Know Today — August 15, 2026</title>
+<style>
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #16202a;
+  --muted: #556372;
+  --border: #d9e1ea;
+  --ok: #0f766e;
+  --warn: #b45309;
+  --bad: #b42318;
+  --accent: #1d4ed8;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 24px;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.shell { max-width: 800px; margin: 0 auto; }
+.back { display: inline-block; margin: 0 0 14px 2px; color: var(--muted); font-size: 13px; text-decoration: none; }
+.back:hover { color: var(--accent); text-decoration: underline; }
+.card {
+  max-width: 800px;
+  margin: 0 0 14px;
+  padding: 18px 50px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.measure { max-width: 700px; }
+h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+h1 { margin: 0 0 1px; font-size: 22px; line-height: 1.25; }
+h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.35; }
+h3 { margin: 0 0 10px; font-size: 15px; }
+p { margin: 8px 0; }
+time { display: block; color: var(--muted); font-size: 14px; }
+ul { margin: 8px 0 8px 22px; padding: 0; }
+li { margin: 4px 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.tag {
+  padding: 3px 9px;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-size: 13px;
+  font-weight: 600;
+}
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 8px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+th { background: #f3f6fa; font-size: 13px; }
+a { color: var(--accent); }
+.signal { color: var(--ok); font-weight: 650; }
+.caution { color: var(--warn); font-weight: 650; }
+.risk { color: var(--bad); font-weight: 650; }
+footer { color: var(--muted); font-size: 12px; text-align: center; padding: 4px 0 0; }
+@media (max-width: 620px) {
+  body { padding: 16px; }
+  .card { padding: 18px 20px; }
+}
+</style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+<div class="shell">
+  <nav aria-label="Briefing navigation"><a class="back" href="index.html">← All briefings</a></nav>
+
+  <main>
+    <header class="card">
+      <h1>Know Today</h1>
+      <time datetime="2026-08-15">August 15, 2026</time>
+    </header>
+
+    <section class="card" aria-label="Topics">
+      <div class="tags">
+        <span class="tag">Connected agents</span>
+        <span class="tag">Coding agents</span>
+        <span class="tag">Agent handoffs</span>
+        <span class="tag">Browser privacy</span>
+        <span class="tag">Local models</span>
+        <span class="tag">Content provenance</span>
+        <span class="tag">Workflow security</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>👀 Keep an eye on</h2>
+      <ul>
+        <li>Reported connected agents can combine cloud computers, app integrations, demonstrated tasks, and scheduled routines for bounded knowledge-work automation.</li>
+        <li>Reported auto-approval in coding agents shifts the bottleneck from prompting to repository isolation, tests, review gates, and recovery.</li>
+        <li>Cross-session agent handoffs make specialist roles more practical, but summaries need a standard contract rather than blind trust.</li>
+        <li>Browser-tab capture and connected email, chat, and terminal tools expand an agent’s useful context and its data-exposure boundary at the same time.</li>
+        <li>Open-weight models around 30B parameters are increasingly viable for local experiments, although visual and code-generation quality may still lag frontier systems.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧭 What changed</h2>
+      <table>
+        <thead>
+          <tr><th>Capability</th><th>Practical implication</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="signal">Persistent agent routines</span></td>
+            <td>Start with a narrow, repeatable workflow such as classification or a daily digest, then add actions only after output quality is measured.</td>
+          </tr>
+          <tr>
+            <td><span class="signal">Agent-to-agent messaging</span></td>
+            <td>Split implementation, testing, and review only when each role has explicit ownership, acceptance criteria, and evidence to hand over.</td>
+          </tr>
+          <tr>
+            <td><span class="signal">Local deployment options</span></td>
+            <td>Privacy-sensitive prototypes can move closer to local infrastructure, subject to memory requirements, quantization trade-offs, and task-specific evaluation.</td>
+          </tr>
+          <tr>
+            <td><span class="caution">Provenance features</span></td>
+            <td>Watermarks and labels can support disclosure, but should complement retained creation records and distribution controls rather than serve as proof by themselves.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>🛠️ Practical workflows</h2>
+      <ul>
+        <li><strong>Give agents service-shaped jobs.</strong> Define inputs, allowed tools, expected output, escalation conditions, and a human owner before connecting live systems.</li>
+        <li><strong>Make handoffs inspectable.</strong> Require a short task contract: files changed, commands run, test evidence, unresolved risks, and the next accountable person.</li>
+        <li><strong>Separate credentials by workflow.</strong> A research agent does not need the same mailbox, terminal, or production access as an implementation agent.</li>
+        <li><strong>Evaluate models on total work.</strong> Compare retries, review time, latency, and failure recovery alongside headline quality or API price.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>💭 Opinions worth testing</h2>
+      <ul>
+        <li><strong>Opinion:</strong> Many model releases are incremental, so only evaluate a new option when it changes cost, latency, deployment control, or a task outcome that matters.</li>
+        <li><strong>Prediction:</strong> Text-watermark detection may be defeated by rewriting, which favors provenance records and clear disclosure over detection-only policies.</li>
+        <li><strong>Opinion:</strong> A lower-cost coding model can be the better operational choice even when it is not a personal favorite, if internal tasks confirm lower total workflow cost.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>⚠️ Caveats</h2>
+      <ul>
+        <li><span class="caution">Reported, not independently verified:</span> product availability, pricing, benchmarks, policy details, and several model names require checking before a purchasing or security decision.</li>
+        <li><span class="risk">Security-sensitive:</span> cloud computers, broad tab access, email, chat, file storage, and terminals should be assessed for retention, logging, credential scope, and exception handling.</li>
+        <li>Subjective model rankings are useful prompts for testing, not evidence that one model will win on a particular codebase or workflow.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>✨ Try this today</h2>
+      <ul>
+        <li><strong>Build a read-only daily digest.</strong> Give an LLM a small folder of local notes or exported text, a fixed output template, and no write-capable tools; the expected result is a repeatable briefing you can judge for omissions and noise.</li>
+        <li><strong>Test a three-role change in Git worktrees.</strong> Create separate worktrees and local ports for planning, implementation, and review, then have each LLM session produce a structured handoff; the outcome is a concrete measure of whether parallelism reduces or increases integration work.</li>
+        <li><strong>Run a coding-agent evaluation on a disposable repository.</strong> Prepare tests, a narrow issue, and a clean branch before enabling higher autonomy; compare test results, diff quality, and review effort against your usual workflow.</li>
+        <li><strong>Probe local-model fit with one private task.</strong> Try a quantized local model on document classification or summarization and record memory use, latency, and error cases; the outcome is a grounded view of whether local control is worth the quality trade-off.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>None of this content is sponsored.</footer>
+</div>
+</body>
+</html>
