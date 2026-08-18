@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily technology briefing — August 18, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .shell { max-width: 800px; margin: 0 auto; }
+    nav { max-width: 700px; margin: 0 auto 14px; font-size: 13px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    main { display: grid; gap: 14px; }
+    .card {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 50px;
+    }
+    .measure { max-width: 700px; margin: 0 auto; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+    h3 { margin: 0 0 10px; font-size: 15px; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time, .muted { color: var(--muted); }
+    time { display: block; font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      display: inline-block;
+      padding: 3px 9px;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #173d7a;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .signal { color: var(--ok); font-weight: 650; }
+    .caution { color: var(--warn); font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+    th, td { padding: 8px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: #f3f6fa; }
+    code { padding: 1px 5px; border: 1px solid var(--border); border-radius: 6px; background: #f3f6fa; font-size: .9em; }
+    pre { overflow: auto; padding: 12px; border-radius: 8px; background: #0b1020; color: #dbe7ff; }
+    footer { max-width: 700px; margin: 14px auto 0; color: var(--muted); font-size: 12px; }
+    @media (max-width: 560px) {
+      body { padding: 16px; }
+      .card { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <div class="shell">
+    <nav aria-label="Briefing navigation"><a href="index.html">← All briefings</a></nav>
+
+    <main>
+      <header class="card">
+        <div class="measure">
+          <h1>Know Today</h1>
+          <time datetime="2026-08-18">August 18, 2026</time>
+        </div>
+      </header>
+
+      <section class="card" aria-label="Topics">
+        <div class="measure tags">
+          <span class="tag">AI agents</span>
+          <span class="tag">Agent workflows</span>
+          <span class="tag">Git worktrees</span>
+          <span class="tag">Developer tools</span>
+          <span class="tag">Automation guardrails</span>
+          <span class="tag">Quality gates</span>
+          <span class="tag">LLM cost control</span>
+          <span class="tag">Scheduled routines</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>👀 Keep an eye on</h2>
+          <ul>
+            <li>Git worktrees make it practical to run parallel AI-agent changes without sharing a working directory.</li>
+            <li>Reusable agent procedures can move from a manually proven workflow to scheduled recurring work with completion and failure notifications.</li>
+            <li>Verification—not agent availability—is the limiting factor when several agents produce code or operational outputs in parallel.</li>
+            <li>Iteration caps, timeouts, scoped permissions, and model selection are becoming baseline controls for agent loops because token spend can otherwise run away.</li>
+            <li>Exception-based monitoring becomes credible only after deterministic checks and a clear human quality bar are in place.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>🧭 What changed</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Capability</th>
+                <th>Practical implication</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Agents operate in bounded local project contexts</td>
+                <td>Prefer small, purpose-built folders and least-privilege connections over broad workspace access.</td>
+              </tr>
+              <tr>
+                <td>Parallel task execution is a usable development pattern</td>
+                <td>Split work by files, components, or proposals with little overlap; merge only after checks pass.</td>
+              </tr>
+              <tr>
+                <td>Repeatable workflows can be scheduled</td>
+                <td>Automate recurring, stable tasks with explicit delivery locations and escalation paths.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>🛠️ Practical workflows</h2>
+          <ul>
+            <li><span class="signal">Start supervised:</span> prove one agent can complete a narrow task before adding parallel workers.</li>
+            <li>Use linting, tests, and type checks as machine-verifiable gates; use a written review rubric for design and product judgment.</li>
+            <li>Turn a validated manual result into a reusable procedure instead of attempting to specify an abstract process from scratch.</li>
+            <li>Keep one place for completion and exception notifications so scheduled work does not become invisible.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>💭 Opinions worth testing</h2>
+          <ul>
+            <li><strong>Opinion:</strong> orchestration can compress a multi-week backlog into a single engineer’s afternoon when tasks are independent and self-checking; test this against a representative backlog before changing delivery expectations.</li>
+            <li><strong>Opinion:</strong> building an agent workflow can be worthwhile even when doing it manually is faster once; reserve that investment for frequent, stable processes.</li>
+            <li><strong>Prediction:</strong> people may eventually steer hundreds of agents by intent and monitor exceptions; this is not evidence of reliable general-purpose production autonomy today.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>⚠️ Caveats</h2>
+          <ul>
+            <li><span class="caution">Verify current capabilities:</span> described product features and permission behavior may have changed and need direct documentation checks before adoption.</li>
+            <li>Large productivity claims are aspirational and lack methodology; integration, review, and product decisions can remain the actual bottlenecks.</li>
+            <li>Cost-loss examples are anecdotal, but they are sufficient reason to require hard budget and runtime limits.</li>
+            <li>Do not delegate quality-critical work end-to-end unless the environment, access, review process, and acceptance criteria are deliberately prepared.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="measure">
+          <h2>✨ Try this today</h2>
+          <ul>
+            <li><strong>Parallelize a small fix.</strong> Create two Git worktrees for separate low-overlap changes, then ask separate agent sessions to propose and implement each change with tests; expect cleaner isolation and an explicit merge/review step.</li>
+            <li><strong>Build a checked maintenance routine.</strong> Choose a recurring task such as dependency review or release-note drafting, write objective acceptance checks, and run it once manually with an LLM; expect a reusable checklist before considering scheduling.</li>
+            <li><strong>Set an agent budget contract.</strong> Before an iterative task, specify allowed directories, a maximum iteration count, a timeout, and a smaller default model; expect failures to become bounded and easier to diagnose.</li>
+            <li><strong>Separate correctness from taste.</strong> Ask an LLM to produce a change, run automated checks, then review it against a short human rubric for naming, interface clarity, and product fit; expect to see which feedback can be automated and which cannot.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>None of this content is sponsored.</footer>
+  </div>
+</body>
+</html>
