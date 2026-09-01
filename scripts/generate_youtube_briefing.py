@@ -23,6 +23,8 @@ DEFAULT_OUTPUT = PROJECT_ROOT / "output" / "youtube"
 DEFAULT_DOCS = PROJECT_ROOT / "docs"
 EXTRACT_PROMPT = PROJECT_ROOT / "prompts" / "extract_youtube_learnings.md"
 RENDER_PROMPT = PROJECT_ROOT / "prompts" / "render_youtube_briefing.md"
+TELEGRAM_CREDENTIALS_PATH = Path.home() / "Library/Application Support/plan-bot/credentials"
+DEFAULT_PUBLIC_BASE_URL = "https://coodeex.github.io/know-today"
 
 
 def proxy_settings() -> dict[str, str] | None:
@@ -251,6 +253,47 @@ def add_archive_link(briefing_path: Path) -> None:
     briefing_path.write_text(html, encoding="utf-8")
 
 
+def load_telegram_settings() -> tuple[str, str]:
+    """Read the existing plan-bot credentials without copying them into this project."""
+    credentials_path = Path(os.environ.get("KNOW_TODAY_TELEGRAM_CREDENTIALS_PATH", TELEGRAM_CREDENTIALS_PATH))
+    try:
+        if credentials_path.stat().st_mode & 0o077:
+            raise RuntimeError(f"Telegram credentials file must be private: {credentials_path}")
+        lines = credentials_path.read_text(encoding="utf-8").splitlines()
+    except FileNotFoundError as error:
+        raise RuntimeError(f"Telegram credentials file was not found: {credentials_path}") from error
+
+    settings = {}
+    for line in lines:
+        if line and not line.startswith("#") and "=" in line:
+            key, value = line.split("=", 1)
+            settings[key] = value
+    token = settings.get("TELEGRAM_BOT_TOKEN")
+    chat_id = settings.get("TELEGRAM_CHAT_ID")
+    if not token or not chat_id:
+        raise RuntimeError(f"Telegram credentials are incomplete: {credentials_path}")
+    return token, chat_id
+
+
+def send_publish_notification(briefing_name: str, briefing_date: str) -> None:
+    """Notify the plan-bot channel after a briefing is publicly available."""
+    token, chat_id = load_telegram_settings()
+    public_base_url = os.environ.get("KNOW_TODAY_PUBLIC_URL", DEFAULT_PUBLIC_BASE_URL).rstrip("/")
+    response = requests.post(
+        f"https://api.telegram.org/bot{token}/sendMessage",
+        data={
+            "chat_id": chat_id,
+            "text": f"Know Today published — {briefing_date}\n{public_base_url}/briefings/{briefing_name}",
+            "disable_web_page_preview": "true",
+        },
+        timeout=30,
+    )
+    response.raise_for_status()
+    result = response.json()
+    if not result.get("ok"):
+        raise RuntimeError(f"Telegram rejected the publication notification: {result}")
+
+
 def publish_to_pages(briefing_path: Path, docs_dir: Path, briefing_name: str, briefing_date: str) -> None:
     """Copy the new artifact to Pages, then commit and push only Pages files."""
     public_briefing = docs_dir / "briefings" / briefing_name
@@ -274,6 +317,11 @@ def publish_to_pages(briefing_path: Path, docs_dir: Path, briefing_name: str, br
     subprocess.run(["git", "commit", "-m", f"Publish briefing {briefing_date}"], cwd=PROJECT_ROOT, check=True)
     subprocess.run(["git", "push", "origin", "main"], cwd=PROJECT_ROOT, check=True)
     print(f"Published: {public_briefing}")
+    try:
+        send_publish_notification(briefing_name, briefing_date)
+        print("Sent Telegram publication notification.")
+    except (OSError, RuntimeError, ValueError, requests.RequestException) as error:
+        print(f"Published, but could not send Telegram notification: {error}", file=sys.stderr)
 
 
 def main() -> int:
