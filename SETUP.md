@@ -59,7 +59,7 @@ Pass `--force` to treat each channel's current latest video as new. Pass `--no-p
 
 Public artifacts live in `docs/`, which is intentionally tracked separately from the private generated `output/` directory. GitHub Pages can serve this directory after the repository is public: in the repository's **Settings → Pages**, select **Deploy from a branch**, then choose `main` and the `/docs` folder. The first published briefing is available from `docs/index.html`.
 
-After a successful Pages commit and push, the generator sends a Telegram notification through the existing plan-bot credentials at `~/Library/Application Support/plan-bot/credentials`. This keeps the bot token and target channel outside the repository. Set `KNOW_TODAY_TELEGRAM_CREDENTIALS_PATH` to use a different private credentials file, or `KNOW_TODAY_PUBLIC_URL` if the published site uses a different base URL.
+After a successful Pages commit and push, the generator waits five minutes, then sends a Telegram notification through the existing plan-bot credentials at `~/Library/Application Support/plan-bot/credentials`. This keeps the bot token and target channel outside the repository. Set `KNOW_TODAY_TELEGRAM_CREDENTIALS_PATH` to use a different private credentials file, or `KNOW_TODAY_PUBLIC_URL` if the published site uses a different base URL.
 
 To route through a Raspberry Pi without exposing a public proxy, create a local SSH SOCKS tunnel to the Pi over Tailscale, then use:
 

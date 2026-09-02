@@ -11,6 +11,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -25,6 +26,7 @@ EXTRACT_PROMPT = PROJECT_ROOT / "prompts" / "extract_youtube_learnings.md"
 RENDER_PROMPT = PROJECT_ROOT / "prompts" / "render_youtube_briefing.md"
 TELEGRAM_CREDENTIALS_PATH = Path.home() / "Library/Application Support/plan-bot/credentials"
 DEFAULT_PUBLIC_BASE_URL = "https://coodeex.github.io/know-today"
+TELEGRAM_NOTIFICATION_DELAY_SECONDS = 5 * 60
 
 
 def proxy_settings() -> dict[str, str] | None:
@@ -276,7 +278,9 @@ def load_telegram_settings() -> tuple[str, str]:
 
 
 def send_publish_notification(briefing_name: str, briefing_date: str) -> None:
-    """Notify the plan-bot channel after a briefing is publicly available."""
+    """Notify the plan-bot channel five minutes after a briefing is public."""
+    print("Waiting five minutes before sending the Telegram publication notification.")
+    time.sleep(TELEGRAM_NOTIFICATION_DELAY_SECONDS)
     token, chat_id = load_telegram_settings()
     public_base_url = os.environ.get("KNOW_TODAY_PUBLIC_URL", DEFAULT_PUBLIC_BASE_URL).rstrip("/")
     response = requests.post(
