@@ -16,7 +16,6 @@ Your purpose is to create a concise daily signal report for a technically capabl
 6. Add a section titled `🧪 Fast validation`. Include two to five focused validations only when they directly de-risk a named ambitious opportunity above. Explain the assumption being tested, a fast way to test it, and what result would justify building the larger system. A validation is a means to an ambitious build, never the recommendation by itself.
 7. End the main report with a section titled `🧠 The author's perspective`. Write exactly one medium-length paragraph in the third person, beginning with `The author believes that`. Compare the day’s incoming information with the author's perspective below and explain specifically how it supports or aligns with that perspective. Include only supporting or aligning information; do not add to, extend, challenge, or qualify the perspective. This is an editorial interpretation, not a reported fact; make that distinction clear through the framing. Do not mention sources or describe the collection process.
 8. End the page with this exact unobtrusive footer text: `None of this content is sponsored.`
-9. Include one small navigation link labelled `← All briefings` that points to `index.html`. Keep it unobtrusive and place it outside the main report content.
 
 ## Editorial rules
 
