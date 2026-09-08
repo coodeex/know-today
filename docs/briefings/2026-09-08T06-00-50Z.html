@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — September 8, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main, footer { max-width: 800px; margin: 0 auto; }
+    .card {
+      margin: 0 0 14px;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+    h3 { margin: 0 0 4px; font-size: 15px; line-height: 1.35; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time, .muted { color: var(--muted); font-size: 13px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      border: 1px solid #bfd0ef;
+      border-radius: 999px;
+      background: #edf4ff;
+      color: #173f89;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .item {
+      margin: 10px 0;
+      padding: 10px 12px;
+      border-left: 3px solid var(--border);
+      background: #fbfcfe;
+    }
+    .item.opinion { border-left-color: var(--accent); }
+    .item.prediction { border-left-color: var(--warn); }
+    .item.risk { border-left-color: var(--warn); }
+    .label { font-weight: 700; color: var(--accent); }
+    .prediction .label { color: var(--warn); }
+    .reflection {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: #f3f6fa; }
+    a { color: var(--accent); }
+    code { padding: 1px 4px; border: 1px solid var(--border); border-radius: 6px; background: #f3f6fa; }
+    pre { overflow: auto; padding: 12px; border-radius: 8px; background: #0b1020; color: #dbe7ff; }
+    footer { padding: 4px 2px 24px; color: var(--muted); font-size: 12px; }
+    .github { display: inline-flex; margin-top: 5px; color: var(--muted); }
+    .github:hover { color: var(--accent); }
+    .github svg { width: 16px; height: 16px; fill: currentColor; }
+    @media (max-width: 560px) {
+      body { padding: 14px; }
+      .card { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <main>
+    <header class="card">
+      <h1>Know Today</h1>
+      <time datetime="2026-09-08">September 8, 2026</time>
+    </header>
+
+    <section class="card" aria-label="Topics">
+      <div class="tags">
+        <span class="tag">AI agents</span>
+        <span class="tag">Scheduled workflows</span>
+        <span class="tag">Reusable skills</span>
+        <span class="tag">Email automation</span>
+        <span class="tag">Connector reliability</span>
+        <span class="tag">Observability</span>
+        <span class="tag">Agent guardrails</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>👀 Keep an eye on</h2>
+      <ul>
+        <li>A reported email-sending capability makes a scheduled AI briefing capable of completing its delivery loop, subject to connector and permission verification.</li>
+        <li>Thin schedules that invoke versioned, reusable skills make it practical to improve many automations without rewriting their triggers.</li>
+        <li>Completion receipts with input counts and actions taken are more useful than a generic “success” status for detecting partial runs.</li>
+        <li>Explicit retry ceilings and preflight checks are becoming essential operating controls as routines gain permission to take external actions.</li>
+        <li>Choosing run time by when an output is acted upon, rather than when it is easiest to schedule, can materially improve automation value.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧭 What changed</h2>
+      <table>
+        <thead>
+          <tr><th>Capability</th><th>Practical implication</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Scheduled routines call reusable skills</td><td>Separate timing from task logic and update behavior through a single maintained component.</td></tr>
+          <tr><td>HTML and shareable artifacts</td><td>Deliver the same analysis as an exception alert, a readable briefing, or a team-review artifact.</td></tr>
+          <tr><td>Shared utility skills</td><td>Centralize connector handling, notification formatting, and validation instead of duplicating them across flows.</td></tr>
+          <tr><td>Reported outbound email action</td><td>Test the full retrieval-to-analysis-to-delivery path before depending on it operationally.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>💭 Opinions worth testing</h2>
+      <div class="item opinion"><span class="label">Opinion —</span> Minimum viable automation stacks will outperform elaborate agent setups for many operational workflows because maintenance, not reasoning novelty, becomes the binding constraint.</div>
+      <div class="item opinion"><span class="label">Opinion —</span> Referencing a shared skill from each routine should be the default packaging model for AI workflow logic.</div>
+      <div class="item opinion"><span class="label">Opinion —</span> Maintenance effort is the dominant scaling variable: automation portfolios compound only when common logic can be repaired once.</div>
+      <div class="item opinion"><span class="label">Opinion —</span> Automations should run at the moment their recipient can act, not at the superficially obvious time of day.</div>
+      <div class="item opinion"><span class="label">Opinion —</span> The lowest cadence that still meets the need is usually the best cadence, since excess runs consume attention and model budget.</div>
+      <div class="item opinion"><span class="label">Opinion —</span> Local execution is preferable until the cost of a missed run justifies cloud reliability and its additional operating surface.</div>
+      <div class="item opinion"><span class="label">Opinion —</span> A workflow should fail before expensive work begins when its required connection, permission, or data dependency is unavailable.</div>
+      <div class="item opinion"><span class="label">Opinion —</span> Automation portfolios should contain only constraints and meaningful enhancements, with routine pruning treated as normal operations.</div>
+      <p class="reflection"><strong>Reflection:</strong> Package workflow logic as reusable skills. Instrument each run with concrete receipts. Schedule outputs around recipient behavior. Prune low-value routines.</p>
+    </section>
+
+    <section class="card">
+      <h2>🔮 Predictions to track</h2>
+      <div class="item prediction"><span class="label">Prediction —</span> Automation usefulness will decay as work patterns, tools, and permissions change, making periodic revalidation a permanent operational requirement.</div>
+      <div class="item prediction"><span class="label">Prediction —</span> Unbounded agent loops will burn meaningful model budgets without delivering outcomes unless maximum attempts and termination rules are encoded.</div>
+      <p class="reflection"><strong>Reflection:</strong> Measure workflow use and outcomes. Review stale automations on a fixed cadence. Cap retries and loops. Escalate unresolved dependency failures.</p>
+    </section>
+
+    <section class="card">
+      <h2>🚀 Build something ambitious</h2>
+
+      <div class="item">
+        <h3>Autonomous operating brief runtime</h3>
+        <p><strong>Outcome:</strong> Give a founder one dependable, decision-ready operating brief that turns scattered business signals into follow-up actions and a durable record of what happened.</p>
+        <p><strong>Workflow:</strong> A schedule invokes a versioned briefing skill; the skill checks its configured dependencies, gathers approved operational data, synthesizes changes and exceptions, renders an HTML artifact, sends it through a configured delivery channel, and records counts, skipped inputs, actions, and failures. It retries only within a fixed budget, rolls back to no-send on validation failure, and escalates only when a required connection or ambiguous action blocks the run.</p>
+        <p><strong>Connected capabilities:</strong> Timed triggers, reusable skills, connector utilities, structured data retrieval, model analysis, HTML rendering, email or messaging delivery, and run telemetry.</p>
+        <p><strong>First meaningful milestone:</strong> Deliver a weekday briefing from two live operational inputs with a verified receipt showing every input checked, every item included, and any skipped data.</p>
+      </div>
+
+      <div class="item">
+        <h3>Automation control plane for small agent teams</h3>
+        <p><strong>Outcome:</strong> Let a lean company operate a growing set of autonomous routines without losing visibility, budget discipline, or the ability to repair them centrally.</p>
+        <p><strong>Workflow:</strong> Teams define skills once, attach schedules and authority boundaries, run preflight checks, collect normalized receipts, detect missing or partial runs, and update shared utilities without touching every routine. The system grants each routine only its configured action scope, stops after bounded retries, preserves an audit trail, and routes blocked cases to a human with the exact remediation needed.</p>
+        <p><strong>Connected capabilities:</strong> Skill registry, scheduler, connector abstraction, validation rules, execution logs, artifact storage, notification routing, and outcome measurement.</p>
+        <p><strong>First meaningful milestone:</strong> Migrate three recurring workflows onto one shared notification and connector utility, then demonstrate that a single update changes all three safely.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>🧪 Fast validation</h2>
+      <table>
+        <thead>
+          <tr><th>Opportunity</th><th>Assumption</th><th>Fast test</th><th>Build signal</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Autonomous operating brief runtime</td>
+            <td>A complete brief is more actionable than fragmented alerts.</td>
+            <td>Run the briefing for five working days using two approved inputs and track whether each brief produces a concrete follow-up.</td>
+            <td>At least three briefs drive a timely decision, delegation, or resolved exception.</td>
+          </tr>
+          <tr>
+            <td>Autonomous operating brief runtime</td>
+            <td>Outbound delivery and receipts can be reliable enough for a daily loop.</td>
+            <td>Exercise successful, missing-connector, and partial-input runs with fixed retry limits.</td>
+            <td>Every run produces an accurate receipt and every failure reaches a clear stop or escalation state.</td>
+          </tr>
+          <tr>
+            <td>Automation control plane</td>
+            <td>Shared skills reduce maintenance work without creating unsafe coupled changes.</td>
+            <td>Refactor three routines to one utility and make a controlled formatting or validation update.</td>
+            <td>The update reaches all routines while receipts reveal no regressions or hidden dependency failures.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>⚠️ Caveats</h2>
+      <ul>
+        <li>Email sending, routines, skills, artifacts, and connectors require independent confirmation of current availability, provider support, plan eligibility, permissions, and security controls.</li>
+        <li>Reported examples are practical anecdotes rather than measured benchmarks for reliability, cost, latency, or security.</li>
+        <li>Product naming and interface details remain ambiguous enough that implementation decisions should not rely on them without verification.</li>
+        <li>Local-versus-cloud execution and retry budgets should be chosen from the cost of a missed run and observed workload data.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧠 The author's perspective</h2>
+      <p>The author believes that today’s signals align with the view that increasingly autonomous software development and company operations depend less on isolated model prompts than on a capable runtime with durable instructions, integrations, data, authority, and feedback loops: scheduled triggers provide the clock, reusable skills provide maintainable operating knowledge, connected delivery closes an action loop, and observable receipts, preflight checks, bounded retries, rollback, and escalation paths provide the conditions for agents to operate without waiting for constant prompts. The emphasis on shared utilities and central maintenance also supports the idea that a person can coordinate growing groups of agentic loops by encoding reusable practices and learning from their outcomes.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>None of this content is sponsored.</div>
+    <a class="github" href="https://github.com/coodeex/know-today" aria-label="Know Today on GitHub">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.62 7.62 0 0 1 8 4.8c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+    </a>
+  </footer>
+</body>
+</html>
