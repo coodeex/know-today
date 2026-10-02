@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily technology briefing — September 28, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main, footer { max-width: 800px; margin: 0 auto; }
+    .card {
+      margin: 0 0 14px;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+    h3 { margin: 0 0 6px; font-size: 15px; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time { display: block; margin-top: 3px; color: var(--muted); font-size: 13px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      border: 1px solid #bfd0f3;
+      border-radius: 999px;
+      background: #edf3ff;
+      color: #173b85;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .label { color: var(--accent); font-weight: 700; }
+    .caution { color: var(--warn); font-weight: 700; }
+    .reflection { color: var(--muted); }
+    a { color: var(--accent); }
+    footer {
+      padding: 4px 2px 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+    .github {
+      display: inline-flex;
+      margin-top: 6px;
+      color: var(--muted);
+    }
+    .github:hover { color: var(--accent); }
+    .github svg { width: 16px; height: 16px; fill: currentColor; }
+    @media (max-width: 560px) {
+      body { padding: 14px; }
+      .card { padding: 18px 22px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <main>
+    <header class="card">
+      <h1>Know Today</h1>
+      <time datetime="2026-09-28">September 28, 2026</time>
+    </header>
+
+    <section class="card" aria-label="Topics">
+      <div class="tags">
+        <span class="tag">Decision models</span>
+        <span class="tag">Structured outputs</span>
+        <span class="tag">AI agents</span>
+        <span class="tag">Developer tools</span>
+        <span class="tag">URL security</span>
+        <span class="tag">Inference cost</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>👀 Keep an eye on</h2>
+      <ul>
+        <li>A reported decision model returns a constrained choice, score, or null instead of prose, making model calls easier to wire into production rules.</li>
+        <li>Reported ultra-low input pricing could make continuous model-based classification and routing economical across high-volume event streams.</li>
+        <li>Pre-navigation URL risk scoring is a concrete inline-security use case, but its error rates need adversarial testing before it controls access.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧭 What changed</h2>
+      <ul>
+        <li><strong>From parsing language to consuming decisions:</strong> applications can target a typed decision contract rather than prompt for text and extract an answer afterward.</li>
+        <li><strong>From selective checks to pervasive checks:</strong> inexpensive bounded inference could sit in routing, ranking, moderation, and security-policy flows.</li>
+        <li><strong>From SDK work to agent-assisted integration:</strong> coding agents can produce integration scaffolding while engineers focus on labels, thresholds, and failure behavior.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>💭 Opinions worth testing</h2>
+      <ul>
+        <li><span class="label">Opinion:</span> Bounded structured outputs are a better production primitive than generated text when the application needs a choice, score, or abstention.</li>
+        <li><span class="label">Opinion:</span> Compact decision outputs can justify using AI checks across workloads previously too costly for conventional generative-model calls.</li>
+        <li><span class="label">Opinion:</span> A specialized decision model may be fast enough for latency-sensitive controls such as request-time or pre-navigation screening.</li>
+      </ul>
+      <p class="reflection"><strong>Reflection:</strong> Define decision schemas. Benchmark latency and calibration. Set abstention handling. Instrument false positives and false negatives.</p>
+    </section>
+
+    <section class="card">
+      <h2>⚠️ Caveats</h2>
+      <ul>
+        <li><span class="caution">Verify:</span> Availability, API behavior, performance, and pricing are reported claims rather than independently established facts.</li>
+        <li><span class="caution">Check the math:</span> A stated $0.04 per million input tokens equals $40 per billion, not the separately stated $42 per billion.</li>
+        <li><span class="caution">Treat URL screening as a model signal:</span> unusual but legitimate domains and adversarial URLs can expose costly classification mistakes.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🚀 Build something ambitious</h2>
+
+      <h3>Decision fabric for autonomous operations</h3>
+      <p><strong>Outcome:</strong> Let a small team run a high-volume operating system that continuously triages inbound events, prioritises work, and routes exceptions to the right agent or person.</p>
+      <p><strong>Workflow:</strong> Ingest product events, support requests, URLs, transactions, and deployment signals; apply typed risk, priority, and eligibility decisions; dispatch approved work to coding or operations agents; record outcomes; recalibrate thresholds from observed results; escalate only abstentions and material-risk cases.</p>
+      <p><strong>Connected capabilities:</strong> Structured decision inference, schema validation, event streaming, coding agents, workflow orchestration, observability, and a labelled outcome store.</p>
+      <p><strong>First meaningful milestone:</strong> Run one live queue through a decision contract with measured cost, latency, accuracy, abstention rate, and downstream resolution quality.</p>
+
+      <h3>Adaptive link-trust layer for AI-operated workflows</h3>
+      <p><strong>Outcome:</strong> Enable agents and employees to handle external links at scale while concentrating security attention on uncertain destinations.</p>
+      <p><strong>Workflow:</strong> Intercept destinations before navigation or tool use; score maliciousness and confidence; permit low-risk routes, hold ambiguous cases for additional analysis, and capture verdict outcomes to improve policy thresholds.</p>
+      <p><strong>Connected capabilities:</strong> URL normalization, structured scoring, browser or agent-tool hooks, policy enforcement, security telemetry, and evaluation datasets.</p>
+      <p><strong>First meaningful milestone:</strong> Evaluate the layer against a curated mix of malicious, ambiguous, and benign-but-unusual URLs with explicit false-positive and false-negative targets.</p>
+    </section>
+
+    <section class="card">
+      <h2>⚡ Fast builds to try</h2>
+      <ul>
+        <li><strong>Typed lead router:</strong> Define three routing labels and have a model return one JSON decision; get an auditable queue without text parsing.</li>
+        <li><strong>URL-risk benchmark harness:</strong> Feed a labelled URL set into a score-or-null contract; get a calibration chart and an error list for threshold tuning.</li>
+        <li><strong>Agent-generated integration stub:</strong> Ask a coding agent for a schema-validated client around a bounded decision API; get a runnable starting point with explicit response types.</li>
+        <li><strong>Abstention dashboard:</strong> Log every null decision alongside its input class; get a practical map of where automation needs better labels or escalation rules.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧠 The author's perspective</h2>
+      <p>The author believes that this shift toward cheap, typed, bounded AI decisions aligns with the broader move to autonomous software development and company operations: a capable runtime needs more than a general-purpose coding agent, and reliable loops emerge when agents have explicit contracts, durable instructions, integrations, outcome data, and authority calibrated to the decision at hand. Fast classification and abstention-aware routing support a system in which agents can continuously triage real operational inputs, dispatch work, learn from measured results, and ask for human help only when a defined condition requires it. The practical value is not a chat interface but the connective tissue for orchestration across planning, implementation, testing, security, and deployment.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>None of this content is sponsored.</div>
+    <a class="github" href="https://github.com/coodeex/know-today" aria-label="Know Today on GitHub">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 4.73c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+    </a>
+  </footer>
+</body>
+</html>
