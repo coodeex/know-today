@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — October 6, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main, footer { max-width: 800px; margin: 0 auto; }
+    .card {
+      margin: 14px 0;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.35; }
+    h3 { margin: 0 0 6px; font-size: 15px; line-height: 1.4; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time, .muted { color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      border: 1px solid #bfd0f3;
+      border-radius: 999px;
+      background: #edf3ff;
+      color: #173d88;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .label { color: var(--accent); font-weight: 700; }
+    .risk { color: var(--warn); font-weight: 700; }
+    .reflection { margin-top: 12px; color: #344252; }
+    a { color: var(--accent); }
+    footer {
+      padding: 10px 2px 2px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .github {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 7px;
+      color: var(--muted);
+    }
+    .github svg { width: 17px; height: 17px; fill: currentColor; }
+    @media (max-width: 620px) {
+      body { padding: 14px; }
+      .card { padding: 18px 22px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <main>
+    <header class="card">
+      <h1>Know Today</h1>
+      <time datetime="2026-10-06">October 6, 2026</time>
+    </header>
+
+    <section class="card" aria-label="Topics">
+      <div class="tags">
+        <span class="tag">AI agents</span>
+        <span class="tag">Agent orchestration</span>
+        <span class="tag">Developer tools</span>
+        <span class="tag">Git worktrees</span>
+        <span class="tag">Pull requests</span>
+        <span class="tag">Software testing</span>
+        <span class="tag">Engineering workflows</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>👀 Keep an eye on</h2>
+      <ul>
+        <li>Nested subagents make it more practical for an agent to coordinate dependency-aware implementation work across multiple tickets.</li>
+        <li>Specification-to-ticket workflows can parallelize substantial changes while keeping each agent session focused and isolated in a worktree.</li>
+        <li>Generated pull requests are becoming an operational interface: runtime evidence, change explanation, and blast-radius classification make review faster and more credible.</li>
+        <li>Session retrospectives turn agent traces into data for improving instructions, tools, checks, and repository navigation.</li>
+        <li>Teams using shared domain terminology conventions may need to migrate from <code>context.md</code> to <code>glossary.mmd</code>.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧭 What changed</h2>
+      <ul>
+        <li><strong>Workflow primitives:</strong> dedicated implementation, pull-request, and retrospective skills package planning, execution, evidence, and learning into reusable operating patterns.</li>
+        <li><strong>Parallel execution:</strong> a task graph can identify ready tickets, assign them to isolated worktrees, merge them through an integration branch, and produce one cohesive pull request.</li>
+        <li><strong>Evidence-first review:</strong> pull-request structure can request tests, screenshots, observable before/after behaviour, and a clear description of affected scope.</li>
+        <li><strong>Operational learning:</strong> retrospective analysis can surface missing guardrails, context loss, weak tooling, and repeated friction that individual sessions leave behind.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🛠️ Practical workflows</h2>
+      <ul>
+        <li>Represent a feature as a dependency graph, not a flat ticket list; launch only work whose prerequisites are complete.</li>
+        <li>Use worktrees for concurrent implementation and an integration branch for combining verified ticket changes.</li>
+        <li>Require each pull request to state visible behaviour, executable evidence, change scope, and consequence if the change is wrong.</li>
+        <li>Run retrospectives over failed, unusually long, or tool-friction-heavy sessions; convert confirmed findings into compact durable instructions or CI checks.</li>
+        <li>Prefer deterministic ticket runners for repeated production workflows, while using agent-led orchestration where the factory infrastructure is still being built.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>💭 Opinions worth testing</h2>
+      <ul>
+        <li><span class="label">Opinion:</span> Ticket-sized agent sessions produce cleaner large changes than asking one agent to carry an entire specification through a long context.</li>
+        <li><span class="label">Opinion:</span> Deterministic ticket loops are the stronger long-term execution model for repeatable engineering work because their behaviour and cost are easier to control.</li>
+        <li><span class="label">Opinion:</span> Agent-managed subagent orchestration is a useful bridge to unattended development when deterministic infrastructure is not yet available.</li>
+        <li><span class="label">Opinion:</span> Human merge throughput is constrained more by reviewer comprehension than by implementation speed, making clear pull-request artifacts a force multiplier.</li>
+        <li><span class="label">Opinion:</span> Claims of correctness from an agent are weak without executable or observable evidence.</li>
+        <li><span class="label">Opinion:</span> Review depth should scale with blast radius and whether a change creates costly external consequences.</li>
+        <li><span class="label">Opinion:</span> Retrospectives should recommend improvements rather than directly changing repositories, since severity and false positives need contextual judgment.</li>
+        <li><span class="label">Opinion:</span> Self-improvement loops can drift into low-value churn when repeated detections trigger repeated automated fixes.</li>
+        <li><span class="label">Opinion:</span> A second-pass analysis of agent sessions can reveal hidden inefficiency that the executing agent never surfaced.</li>
+      </ul>
+      <p class="reflection"><strong>Reflection:</strong> Decompose substantial specifications into dependency-aware tickets. Standardize evidence-rich pull requests. Build deterministic runners for recurring flows. Review retrospective findings before encoding them into the environment.</p>
+    </section>
+
+    <section class="card">
+      <h2>🔮 Predictions to track</h2>
+      <ul>
+        <li><span class="label">Prediction:</span> Nested delegation will make unattended implementation workflows more usable as agent platforms mature.</li>
+        <li><span class="label">Prediction:</span> Automated retrospective remediation will tend toward runaway low-value changes when false positives are allowed to compound.</li>
+        <li><span class="label">Prediction:</span> Explicit requests for pull-request evidence will often cause agents to run an additional test or capture an additional screenshot.</li>
+      </ul>
+      <p class="reflection"><strong>Reflection:</strong> Track nested-delegation quality across real task graphs. Measure evidence coverage in agent-authored pull requests. Gate repository-improvement proposals through contextual triage.</p>
+    </section>
+
+    <section class="card">
+      <h2>🚀 Build something ambitious</h2>
+
+      <h3>Autonomous change factory for product teams</h3>
+      <p><strong>Outcome:</strong> Convert approved product specifications into a continuously operating engineering system that ships cohesive, reviewable changes with less coordination overhead.</p>
+      <p><strong>Workflow:</strong> Ingest a specification, derive a dependency graph, dispatch ready tickets into isolated worktrees, run implementation and tests, integrate compatible changes, generate one evidence-rich pull request, then use completed session data to improve the factory’s instructions and checks. Give agents authority to execute within an approved specification and repository boundary; escalate dependency conflicts, failed verification, and high-blast-radius changes for human decision.</p>
+      <p><strong>Connected capabilities:</strong> coding agents, nested subagents, Git worktrees, task-graph scheduling, test runners, CI, screenshots or runtime checks, pull-request generation, and session-log analysis.</p>
+      <p><strong>First meaningful milestone:</strong> Deliver one multi-ticket feature through the full graph-to-integrated-pull-request path, with every ticket linked to concrete test or runtime evidence.</p>
+
+      <h3>Engineering-memory operating system</h3>
+      <p><strong>Outcome:</strong> Make each agent session improve the next one by turning recurring confusion, tool failures, and missing safeguards into durable repository intelligence.</p>
+      <p><strong>Workflow:</strong> Collect completed execution traces, detect patterns in context loss and friction, propose focused improvements to instructions, terminology, navigation, tool availability, and CI, then feed approved improvements back into future planning and implementation sessions. The compounding asset is a decision record of what repeatedly helped or blocked delivery.</p>
+      <p><strong>Connected capabilities:</strong> session capture, retrospective agents, repository search, skill and instruction files, glossary management, CI configuration, and pull-request evidence.</p>
+      <p><strong>First meaningful milestone:</strong> Analyze a representative set of recent sessions and land a compact set of approved environment improvements that measurably removes repeated friction.</p>
+    </section>
+
+    <section class="card">
+      <h2>⚡ Fast builds to try</h2>
+      <ul>
+        <li><strong>Evidence-first pull-request template:</strong> Add fields for behaviour, tests, screenshots, blast radius, and consequences of failure; get more reviewable agent changes immediately.</li>
+        <li><strong>Ticket dependency visualizer:</strong> Turn a feature’s tickets and prerequisites into a small graph; identify which work can safely run in parallel today.</li>
+        <li><strong>Agent-session friction report:</strong> Feed a completed session transcript into a retrospective prompt; receive a prioritized list of missing tools, instructions, and checks.</li>
+        <li><strong>Repository glossary check:</strong> Create or rename the domain-terms file to <code>glossary.mmd</code> and search dependent instructions; keep agent vocabulary consistent across workflows.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>⚠️ Caveats</h2>
+      <ul>
+        <li><span class="risk">Verify:</span> Reported reliability, cost, and quality gains are workflow claims rather than independent benchmarks.</li>
+        <li><span class="risk">Verify:</span> Nested delegation, automatic skill invocation, compatibility details, and naming conventions may vary by current platform and tooling.</li>
+        <li><span class="risk">Remember:</span> Worktrees, testing discipline, and parallel execution do not establish correctness by themselves; permissions, conflicts, and deployment controls still require deliberate design.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧠 The author's perspective</h2>
+      <p>The author believes that the day’s incoming information aligns with the view that software development and company operations are becoming increasingly autonomous when agents have a capable runtime, durable instructions, integrations, data, and appropriate authority. A dependency-aware ticket graph, nested delegation, isolated implementation environments, integration, verification evidence, and structured pull requests resemble the planning, implementation, testing, and review loops a harness can coordinate across groups of agents. Session retrospectives further support the idea that real-world execution data can become reusable decision knowledge, improving skills, instructions, tools, and guardrails over time while agents escalate consequential ambiguity for human help instead of waiting passively for prompts.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>None of this content is sponsored.</div>
+    <a class="github" href="https://github.com/coodeex/know-today" aria-label="Know Today on GitHub">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 4.8c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>
+    </a>
+  </footer>
+</body>
+</html>
