@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — October 24, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main, footer { max-width: 800px; margin: 0 auto; }
+    .card {
+      margin: 0 0 14px;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+    h3 { margin: 0 0 6px; font-size: 15px; line-height: 1.35; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time, .muted { color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+    .tag {
+      display: inline-block;
+      padding: 3px 9px;
+      color: #123b72;
+      background: #eaf1ff;
+      border: 1px solid #cddcf6;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .item { padding: 10px 0; border-top: 1px solid var(--border); }
+    .item:first-of-type { padding-top: 0; border-top: 0; }
+    .label { color: var(--accent); font-weight: 700; }
+    .caveat { color: var(--warn); }
+    .reflection { color: #263746; }
+    a { color: var(--accent); }
+    footer {
+      padding: 7px 4px 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .github {
+      display: inline-flex;
+      margin-top: 5px;
+      color: var(--muted);
+      vertical-align: middle;
+    }
+    .github:hover { color: var(--accent); }
+    .github svg { width: 16px; height: 16px; fill: currentColor; }
+    @media (max-width: 560px) {
+      body { padding: 14px; }
+      .card { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <main>
+    <header class="card">
+      <h1>Know Today</h1>
+      <time datetime="2026-10-24">October 24, 2026</time>
+      <div class="tags" aria-label="Topics">
+        <span class="tag">AI agents</span>
+        <span class="tag">Model routing</span>
+        <span class="tag">Developer tools</span>
+        <span class="tag">Multi-agent coding</span>
+        <span class="tag">Edge AI</span>
+        <span class="tag">Low-cost robotics</span>
+        <span class="tag">Sim-to-real</span>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>👀 Keep an eye on</h2>
+      <ul>
+        <li>Separating model capability from effort budget gives agent teams a cleaner way to diagnose judgment failures versus incomplete execution.</li>
+        <li>Planner–executor splits can concentrate expensive reasoning on architecture and use cheaper agents for bounded implementation and tests.</li>
+        <li>Parallel coding agents become worthwhile when work is decomposable, acceptance criteria are explicit, and verification can keep pace with output.</li>
+        <li>A refurbished smartphone can reportedly provide local vision, motion sensing, and control for a low-cost walking robot.</li>
+        <li>Simulation-trained locomotion on commodity hardware could make frequent embodied-AI experiments far cheaper than dedicated humanoid platforms.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧭 What changed</h2>
+      <div class="item">
+        <h3>Effort is becoming an operational control</h3>
+        <p>Reasoning time can be tuned separately from model selection, making task routing a system-design problem rather than a picker-menu preference.</p>
+      </div>
+      <div class="item">
+        <h3>Embodied experimentation has a cheaper edge stack</h3>
+        <p>A phone-based robot concept combines sensors, compute, and local inference in hardware that is readily available and inexpensive to replace.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>💭 Opinions worth testing</h2>
+      <div class="item"><p><span class="label">Opinion —</span> Model choice should follow task shape: constrained work can use smaller models, while open-ended reasoning needs stronger ones.</p></div>
+      <div class="item"><p><span class="label">Opinion —</span> A capable default model is more productive than forcing frequent manual model selection.</p></div>
+      <div class="item"><p><span class="label">Opinion —</span> Planning deserves more capability than execution because early architectural errors compound across a long task.</p></div>
+      <div class="item"><p><span class="label">Opinion —</span> Effort tuning is often a better first lever than swapping models when an agent knows what to do but skips necessary work.</p></div>
+      <div class="item"><p><span class="label">Opinion —</span> End-to-end stamina is a more useful frontier metric than isolated intelligence for long-running engineering tasks.</p></div>
+      <div class="item"><p><span class="label">Opinion —</span> Maximum effort should not be the default because it can invite unnecessary work and unsupported assumptions.</p></div>
+      <div class="item"><p><span class="label">Opinion —</span> Falling inference costs may increase total AI spending by unlocking more workloads rather than merely shrinking budgets.</p></div>
+      <p class="reflection"><strong>Reflection:</strong> Classify agent failures by capability, context, execution, and verification. Route planning through the strongest available model. Specify acceptance criteria before parallelizing work. Re-benchmark low-cost models on recurring workflows.</p>
+    </section>
+
+    <section class="card">
+      <h2>🔮 Predictions to track</h2>
+      <div class="item"><p><span class="label">Prediction —</span> Products will increasingly automate model and effort routing from a desired spend or aggressiveness level instead of exposing many manual controls.</p></div>
+      <div class="item"><p><span class="label">Prediction —</span> Smaller models will inherit more capability over time, shifting the cost-quality boundary for routine automation.</p></div>
+      <div class="item"><p><span class="label">Prediction —</span> Total AI usage may rise even as per-unit cost falls because newly economical workloads expand demand.</p></div>
+      <p class="reflection"><strong>Reflection:</strong> Track task-completion rates across model tiers. Refresh routing thresholds on a regular schedule. Forecast demand from workload growth, not token prices alone.</p>
+    </section>
+
+    <section class="card">
+      <h2>🚀 Build something ambitious</h2>
+      <div class="item">
+        <h3>Autonomous engineering delivery system</h3>
+        <p><strong>Outcome:</strong> Ship more product surface area without scaling coordination overhead at the same rate.</p>
+        <p><strong>Workflow:</strong> A strong planner converts goals into dependency-aware work packages; specialized agents implement, test, inspect changes, and update a shared evidence trail; an orchestrator routes exceptions to people only when authority, ambiguity, or real-world input requires it.</p>
+        <p><strong>Connected capabilities:</strong> Code agents, repository and issue access, test runners, deployment tooling, model-and-effort routing, task memory, and outcome-based evaluations.</p>
+        <p><strong>First meaningful milestone:</strong> Complete a production-quality vertical feature from specification through tested pull request with measured plan quality, execution cost, and defect escape rate.</p>
+      </div>
+      <div class="item">
+        <h3>Embodied workflow lab on phone-native robots</h3>
+        <p><strong>Outcome:</strong> Give teams an affordable environment for turning AI policies into repeatable physical behaviors.</p>
+        <p><strong>Workflow:</strong> Train locomotion and perception policies in simulation, deploy them locally to a smartphone-equipped robot, capture sensor and failure data, evaluate recovery behavior, and feed measured gaps back into simulation and policy tuning.</p>
+        <p><strong>Connected capabilities:</strong> Simulation, on-device inference, camera and inertial sensors, 3D-printable hardware, telemetry, experiment tracking, and computer-vision evaluation.</p>
+        <p><strong>First meaningful milestone:</strong> Demonstrate a locally controlled robot completing a repeatable navigation-and-recovery course while logging latency, battery, thermal behavior, and task success.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>⚡ Fast builds to try</h2>
+      <ul>
+        <li><strong>Agent failure classifier:</strong> Tag the last twenty agent failures as capability, missing context, incomplete execution, or verification failure; get a concrete routing policy to test.</li>
+        <li><strong>Plan-to-patch relay:</strong> Have one model draft acceptance criteria and a second model implement against them; get a visible comparison between planning quality and patch quality.</li>
+        <li><strong>Parallel audit map:</strong> Split a repository into independent audit zones and assign one agent to each; get a prioritized list of cross-cutting risks and duplicated findings.</li>
+        <li><strong>Phone edge benchmark:</strong> Run a small vision or sensor-inference workload on an unused smartphone; get latency, battery, and thermal constraints for a physical prototype.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>⚠️ Caveats</h2>
+      <ul>
+        <li class="caveat">Named model releases, feature names, pricing claims, and performance comparisons require independent verification before influencing procurement or architecture.</li>
+        <li class="caveat">Higher effort is a permission to spend more compute, not a guarantee of better judgment or complete execution.</li>
+        <li class="caveat">Reported robotics cost, self-righting, local control, and open-hardware claims need validation for reliability, safety, licensing, and reproducibility.</li>
+        <li class="caveat">A small walking platform should not be treated as evidence of general manipulation or production-grade humanoid capability.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧠 The author's perspective</h2>
+      <p>The author believes that the day’s signals align with a future in which capable runtimes coordinate autonomous software and company operations: separating planning from execution, routing work by judgment and persistence, and using parallel agents with explicit evaluation loops all point toward durable systems rather than isolated prompts. The emphasis on acceptance criteria, failure classification, testing, and selective escalation supports the view that broad authority must be paired with encoded instructions and practical guardrails. Phone-native embodied AI also reinforces the same operating model in the physical world, where accessible sensors, local compute, simulation, and outcome data can give agents the tools and feedback needed to learn across real tasks.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>None of this content is sponsored.</div>
+    <a class="github" href="https://github.com/coodeex/know-today" aria-label="Project repository on GitHub">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 4.73c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+    </a>
+  </footer>
+</body>
+</html>
