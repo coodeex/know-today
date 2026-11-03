@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily technology briefing — November 3, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main, footer { max-width: 800px; margin: 0 auto; }
+    .card {
+      margin: 0 0 14px;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.35; }
+    h3 { margin: 0 0 6px; font-size: 15px; line-height: 1.35; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time { display: block; color: var(--muted); font-size: 13px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 9px;
+      border: 1px solid #bfd0ed;
+      border-radius: 999px;
+      background: #eaf1ff;
+      color: #173d7a;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .item {
+      margin: 10px 0;
+      padding: 10px 12px;
+      border-left: 3px solid var(--accent);
+      background: #f8faff;
+      border-radius: 0 8px 8px 0;
+    }
+    .caution { border-left-color: var(--warn); background: #fffaf3; }
+    .reflection {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .reflection strong { color: var(--text); }
+    a { color: var(--accent); }
+    footer {
+      padding: 8px 4px 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    .github {
+      display: inline-flex;
+      margin-top: 6px;
+      color: var(--muted);
+    }
+    .github:hover, .github:focus { color: var(--accent); }
+    .github svg { width: 17px; height: 17px; fill: currentColor; }
+    @media (max-width: 560px) {
+      body { padding: 14px; }
+      .card { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <main>
+    <header class="card">
+      <h1>Know Today</h1>
+      <time datetime="2026-11-03">November 3, 2026</time>
+    </header>
+
+    <section class="card" aria-label="Topics">
+      <div class="tags">
+        <span class="tag">Generative worlds</span>
+        <span class="tag">Interactive simulation</span>
+        <span class="tag">Open-source models</span>
+        <span class="tag">GPU deployment</span>
+        <span class="tag">Camera control</span>
+        <span class="tag">Game tools</span>
+        <span class="tag">IP safety</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>👀 Keep an eye on</h2>
+      <ul>
+        <li>An open interactive world generator is reportedly available now, potentially moving experimentation beyond closed-preview world-model programs.</li>
+        <li>Keyboard-steerable generated scenes could make controllability, latency, and state persistence more important than visual novelty alone.</li>
+        <li>A claimed single-consumer-GPU deployment would materially widen who can prototype generative simulation if real benchmarks support it.</li>
+        <li>Camera-following quality is emerging as a practical differentiator for interactive worlds rather than a cosmetic demo metric.</li>
+        <li>Demonstrations containing recognizable third-party characters create immediate commercial and legal uncertainty around permissive generation.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧭 What changed</h2>
+      <div class="item">
+        <h3>Interactive generation is the signal</h3>
+        <p>Text-triggered actions and direct steering suggest generated environments can be evaluated as controllable simulations, not merely short-form video output.</p>
+      </div>
+      <div class="item">
+        <h3>Access may be shifting</h3>
+        <p>Open availability would let small teams inspect deployment, adapt workflows, and run their own control tests without depending on a waitlist.</p>
+      </div>
+      <div class="item caution">
+        <h3>Claims need technical validation</h3>
+        <p>Availability, hardware requirements, maximum steering duration, and comparative camera quality remain claims that require independent testing.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>💭 Opinions worth testing</h2>
+      <div class="item">
+        <strong>Opinion:</strong> Immediate open access can make a less established world model more valuable for R&amp;D than a stronger but gated alternative.
+      </div>
+      <div class="item">
+        <strong>Opinion:</strong> A system becomes strategically interesting when people can direct it through time, not simply prompt it into producing a clip.
+      </div>
+      <div class="item">
+        <strong>Opinion:</strong> Camera adherence is a foundational usability test for generated worlds because it determines whether a user can navigate and inspect a scene deliberately.
+      </div>
+      <div class="item">
+        <strong>Opinion:</strong> Curated demonstrations of recognizable characters are a poor basis for judging durable prompt flexibility in a commercial product.
+      </div>
+      <p class="reflection"><strong>Reflection:</strong> Build a repeatable control benchmark. Measure input latency and camera adherence. Test persistence across long action sequences. Separate prototype appeal from commercial eligibility.</p>
+    </section>
+
+    <section class="card">
+      <h2>🔮 Predictions to track</h2>
+      <div class="item">
+        <strong>Prediction:</strong> Any apparent permissiveness toward generating well-known third-party characters is likely to become constrained as legal and product policies mature.
+      </div>
+      <p class="reflection"><strong>Reflection:</strong> Track policy changes. Design character pipelines around owned assets. Keep commercial use separate from informal capability exploration.</p>
+    </section>
+
+    <section class="card">
+      <h2>🚀 Build something ambitious</h2>
+
+      <div class="item">
+        <h3>Simulation factory for embodied-product testing</h3>
+        <p><strong>Outcome:</strong> Give robotics, game, education, and spatial-computing teams a continuous stream of controllable scenarios that expose navigation and interaction failures before expensive real-world production.</p>
+        <p><strong>Workflow:</strong> Product teams define environments, agents, actions, camera paths, and success conditions; a world generator creates playable episodes; control agents execute scripted and exploratory trajectories; evaluators score state continuity, action adherence, collisions, and visual drift; failing cases become a searchable regression library and feed the next scenario batch.</p>
+        <p><strong>Connected capabilities:</strong> Interactive world generation, keyboard or programmatic control, multimodal scene evaluation, scenario planning, experiment tracking, GPU orchestration, and a human escalation queue for unsafe, ambiguous, or rights-sensitive content.</p>
+        <p><strong>First meaningful milestone:</strong> Produce fifty reproducible navigation episodes across five scene types, with a dashboard that ranks failures by control fidelity and camera adherence.</p>
+      </div>
+
+      <div class="item">
+        <h3>Generative location scout and previsualization studio</h3>
+        <p><strong>Outcome:</strong> Let creative and product teams explore an interactive space, decide shots or journeys faster, and turn approved concepts into a structured production brief.</p>
+        <p><strong>Workflow:</strong> A user describes a world and desired movements; the system generates explorable variants; an agent captures guided camera routes, records decisions, compares visual continuity, and converts selected paths into shot lists, environment requirements, and implementation tasks; usage data improves the library of reusable scene patterns.</p>
+        <p><strong>Connected capabilities:</strong> Text-to-world generation, camera control, multimodal quality scoring, asset metadata, collaborative annotation, and task automation across design and engineering tools.</p>
+        <p><strong>First meaningful milestone:</strong> Deliver a session where a team explores three scene variants and exports one approved route with annotated frames and a production-ready brief.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>⚡ Fast builds to try</h2>
+      <ul>
+        <li><strong>Make a world-control scorecard:</strong> define ten movement and camera commands, run each repeatedly, and get a compact baseline for control fidelity.</li>
+        <li><strong>Create a persistence stress test:</strong> perform a fixed sequence of object and movement actions, then check whether the scene retains the expected state.</li>
+        <li><strong>Build a camera-route recorder:</strong> capture a short guided journey through a generated environment and get a shareable previsualization artifact.</li>
+        <li><strong>Assemble a rights-risk prompt set:</strong> test original-character descriptions beside potentially protected references and get an internal policy boundary map.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>⚠️ Caveats</h2>
+      <ul>
+        <li>Model identity, licensing, weights, and deployment conditions should be verified before any product commitment.</li>
+        <li>Consumer-GPU feasibility depends on actual VRAM, throughput, resolution, setup complexity, and runtime stability.</li>
+        <li>Short demonstrations do not establish reliable state persistence, consistent action response, or broad prompt coverage.</li>
+        <li>Content involving recognizable characters requires careful legal and policy assessment before commercial use.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧠 The author's perspective</h2>
+      <p>The author believes that today’s movement toward controllable, interactive generated environments aligns with a future in which capable runtimes coordinate autonomous work rather than merely answer isolated prompts: a world model becomes useful when it can accept direction, sustain state, expose measurable outcomes, and connect to planning and evaluation loops. The reported possibility of accessible deployment reinforces the idea that ambitious builders can assemble durable systems from models, instructions, tools, data, and scoped authority, while camera control and repeatable simulation evaluation illustrate the kind of operational feedback an autonomous system needs to learn from outcomes and escalate uncertainty for human help when real-world judgment is necessary.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>None of this content is sponsored.</div>
+    <a class="github" href="https://github.com/coodeex/know-today" aria-label="Know Today on GitHub">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38l-.01-1.49c-2.01.44-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 4.73c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>
+    </a>
+  </footer>
+</body>
+</html>
