@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — November 15, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main, footer { max-width: 800px; margin: 0 auto; }
+    .card {
+      margin: 0 0 14px;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1, h2, h3, p, ul, table, pre, blockquote { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.35; }
+    h3 { margin: 0 0 5px; font-size: 15px; line-height: 1.4; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    time, .muted { color: var(--muted); font-size: 13px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
+    .tag {
+      padding: 3px 9px;
+      border: 1px solid #bfd0f6;
+      border-radius: 999px;
+      background: #edf3ff;
+      color: #173c88;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .item + .item { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+    .label { color: var(--accent); font-weight: 700; }
+    .caveat { color: #743400; }
+    .reflection { border-left: 3px solid var(--accent); padding-left: 11px; }
+    a { color: var(--accent); }
+    footer { padding: 4px 2px 20px; color: var(--muted); font-size: 12px; }
+    .github {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 6px;
+      color: var(--muted);
+    }
+    .github svg { width: 16px; height: 16px; fill: currentColor; }
+    @media (max-width: 560px) {
+      body { padding: 14px; }
+      .card { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <main>
+    <div class="card">
+      <header class="measure">
+        <h1>Know Today</h1>
+        <time datetime="2026-11-15">November 15, 2026</time>
+      </header>
+      <section class="tags" aria-label="Topics">
+        <span class="tag">Holonomic robotics</span>
+        <span class="tag">Indoor navigation</span>
+        <span class="tag">LiDAR sensing</span>
+        <span class="tag">Motion control</span>
+        <span class="tag">Safety engineering</span>
+        <span class="tag">Maker prototypes</span>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>👀 Keep an eye on</h2>
+      <ul>
+        <li>Ball-wheel drivetrains can give rideable robots lateral motion that is valuable in tight indoor environments.</li>
+        <li>Map-point navigation is now demonstrable on low-cost custom platforms, shifting early robotics validation away from expensive vehicle stacks.</li>
+        <li>Thin obstacles can evade laser scanning, making perception coverage a practical limit on autonomous mobility rather than a corner case.</li>
+        <li>Low-speed prototypes are useful for exposing the gap between autonomous navigation and safe operation around people.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧭 What changed</h2>
+      <div class="item">
+        <h3>Rideable holonomic autonomy is accessible at maker scale</h3>
+        <p>A custom platform can combine map-based movement, sideways travel, laser scanning, and inexpensive control hardware without a conventional automotive architecture.</p>
+      </div>
+      <div class="item">
+        <h3>Mechanical simplicity can unlock unusual movement</h3>
+        <p>A split-ball wheel arrangement separates powered travel on one axis from free rotation on the other, creating omni-directional motion with a compact mechanism.</p>
+      </div>
+      <div class="item">
+        <h3>Perception weaknesses are visible in physical testing</h3>
+        <p class="caveat">A collision with a narrow mannequin feature shows that obstacle detection must be tested against sparse, low-profile, and partially occluded objects.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>💭 Opinions worth testing</h2>
+      <div class="item">
+        <p><span class="label">Opinion:</span> Unconventional working prototypes are strategically valuable because their physical constraints reveal new product and engineering directions.</p>
+      </div>
+      <div class="item">
+        <p><span class="label">Opinion:</span> Simple omni-directional wheel mechanisms deserve consideration when maneuverability matters more than conventional drivetrain familiarity.</p>
+      </div>
+      <p class="reflection"><strong>Reflection:</strong> Build a holonomic test rig. Compare constrained-space routes. Measure lateral-positioning accuracy. Stress perception with sparse obstacles.</p>
+    </section>
+
+    <section class="card">
+      <h2>⚠️ Caveats</h2>
+      <ul>
+        <li>Hardware specifications, mapping methods, localization robustness, braking behavior, and control software are not established.</li>
+        <li>The stated controller cost is ambiguous and needs independent verification.</li>
+        <li>The demonstrated speed and setting do not establish road-capable autonomous driving performance.</li>
+        <li>Any system carrying people or working near them needs redundant sensing, conservative stopping behavior, and adversarial physical tests.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🚀 Build something ambitious</h2>
+      <div class="item">
+        <h3>Adaptive autonomy-validation operating system for indoor fleets</h3>
+        <p><strong>Outcome:</strong> Give warehouse, hospitality, and facility operators a continuously improving way to deploy agile indoor vehicles without treating navigation success as proof of safe operation.</p>
+        <p><strong>Workflow:</strong> Ingest vehicle telemetry, laser scans, maps, routes, collision reports, and operator interventions; generate scenario libraries from real near-misses; command vehicles within defined zones and speed limits; score perception and motion performance; assign physical inspection or site changes when confidence falls below policy thresholds.</p>
+        <p><strong>Connected capabilities:</strong> Robotics middleware, mapping and localization, fleet telemetry, simulation, computer vision for test review, coding agents for control-stack changes, and an agent runtime that manages evaluation loops and escalates human work when a real-world intervention is required.</p>
+        <p><strong>First meaningful milestone:</strong> Run a repeatable indoor course where the system detects and classifies failures involving narrow, low-profile, and partially occluded obstacles, then produces an actionable vehicle-configuration and test report.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>⚡ Fast builds to try</h2>
+      <ul>
+        <li><strong>Thin-object perception course:</strong> Place rods, straps, chair legs, and partial obstructions along a small robot route; record which objects the scanner misses and get an immediate hazard map.</li>
+        <li><strong>Holonomic parking challenge:</strong> Program a small omni-drive platform to enter sideways into marked bays; begin with fixed coordinates and get a concrete measure of lateral-control precision.</li>
+        <li><strong>Obstacle-test generator:</strong> Ask an AI coding assistant to create a checklist and logging template for adversarial indoor obstacles; begin by listing your scanner height and route geometry and get a reusable test protocol.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧠 The author's perspective</h2>
+      <p>The author believes that the day’s reported maker vehicle aligns with the view that capable autonomy emerges from a runtime that connects tools, instructions, data, evaluation, and properly bounded authority rather than from isolated model interactions. In this editorial interpretation, its map-directed movement and unusual drivetrain show how a complete physical system can turn component-level capabilities into end-to-end work, while its missed thin obstacle reinforces the need to encode real-world learnings as durable decision data and to route exceptions to people when physical intervention is necessary. The emphasis on repeated perception tests also supports the perspective that autonomous systems should learn from outcomes, retain reusable operating knowledge, and improve through structured loops spanning planning, implementation, testing, and deployment.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>None of this content is sponsored.</div>
+    <a class="github" href="https://github.com/coodeex/know-today" aria-label="Know Today on GitHub">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 4.87c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>
+    </a>
+  </footer>
+</body>
+</html>
