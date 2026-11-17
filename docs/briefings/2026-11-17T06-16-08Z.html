@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — November 17, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main, footer { max-width: 800px; margin: 0 auto; }
+    .card {
+      margin: 14px 0;
+      padding: 18px 50px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .measure { max-width: 700px; }
+    h1 { margin: 0 0 2px; font-size: 22px; line-height: 1.25; }
+    h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+    h3 { margin: 0 0 6px; font-size: 15px; line-height: 1.35; }
+    p { margin: 8px 0; max-width: 700px; }
+    ul { margin: 8px 0 8px 22px; max-width: 700px; padding: 0; }
+    li { margin: 4px 0; }
+    a { color: var(--accent); }
+    time, .muted { color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      display: inline-block;
+      padding: 3px 9px;
+      border: 1px solid #c9d7f4;
+      border-radius: 999px;
+      background: #eaf1ff;
+      color: #173e88;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .item + .item { margin-top: 12px; }
+    .label { color: var(--accent); font-weight: 700; }
+    .reflection { border-top: 1px solid var(--border); padding-top: 8px; color: var(--muted); }
+    .caution { color: var(--warn); font-weight: 650; }
+    .risk { color: var(--bad); font-weight: 650; }
+    footer {
+      padding: 12px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    .github {
+      display: inline-flex;
+      margin-top: 5px;
+      color: var(--muted);
+      vertical-align: middle;
+    }
+    .github:hover { color: var(--accent); }
+    .github svg { width: 16px; height: 16px; fill: currentColor; }
+    @media (max-width: 580px) {
+      body { padding: 14px; }
+      .card { padding: 18px 22px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <main>
+    <header class="card">
+      <div class="measure">
+        <h1>Know Today</h1>
+        <time datetime="2026-11-17">November 17, 2026</time>
+      </div>
+    </header>
+
+    <section class="card" aria-label="Topics">
+      <div class="tags">
+        <span class="tag">AI agents</span>
+        <span class="tag">Coding agents</span>
+        <span class="tag">Issue triage</span>
+        <span class="tag">AI evaluation</span>
+        <span class="tag">Developer workflows</span>
+        <span class="tag">Software reliability</span>
+        <span class="tag">Launch infrastructure</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>👀 Keep an eye on</h2>
+        <ul>
+          <li>Issue-triage agents can validate reports, reproduce defects, propose fixes, and prioritize work when a failing test provides a strong success oracle.</li>
+          <li>Independent AI reviewers from different model families can expose different defects in the same change, making ensemble review useful for high-risk code.</li>
+          <li>Longer-running coding agents are expanding from interactive assistance into delegated implementation where tests can judge the result.</li>
+          <li>Stale operational context, such as outdated database scale assumptions, can make an otherwise capable agent reason toward bad decisions.</li>
+          <li>Tower-assisted capture of a returning heavy launch vehicle could materially change launch cadence if it becomes repeatable and rapidly reusable.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>🧭 What changed</h2>
+        <div class="item">
+          <h3>Test-oracle-driven delegation is becoming practical</h3>
+          <p>Bounded coding work can run for longer when the agent can target a reference suite, reproduced failure, or similarly executable outcome.</p>
+        </div>
+        <div class="item">
+          <h3>Bug intake can become an evidence pipeline</h3>
+          <p>A useful agent workflow links the incoming report to reproduction evidence, a severity judgment, a proposed patch, and a passing regression test.</p>
+        </div>
+        <div class="item">
+          <h3>Heavy-launch reuse has a more concrete technical path</h3>
+          <p>A reported tower capture suggests a route to retaining large returning vehicles without conventional landing hardware, although operational cadence remains unproven.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>💭 Opinions worth testing</h2>
+        <div class="item"><span class="label">Opinion:</span> Agents are currently stronger at tactical, verifiable engineering work than at ambiguous architecture and product trade-offs.</div>
+        <div class="item"><span class="label">Opinion:</span> Deep domain knowledge remains a major multiplier for agent output because it improves terminology, task sequencing, and solution evaluation.</div>
+        <div class="item"><span class="label">Opinion:</span> Cheap implementation raises the risk of feature and complexity bloat unless teams deliberately hold a higher quality bar.</div>
+        <div class="item"><span class="label">Opinion:</span> The productivity released by agents is better reinvested in uptime, service quality, and revenue-critical reliability than in feature volume.</div>
+        <div class="item"><span class="label">Opinion:</span> Green CI and extensive linting can create false confidence when tests measure the wrong properties or miss the real system boundary.</div>
+        <div class="item"><span class="label">Opinion:</span> Simpler systems are easier to secure and maintain than agent-generated layers of defensive abstraction that obscure the actual risk.</div>
+        <div class="item"><span class="label">Opinion:</span> Humans must retain operational understanding of core systems because prompting alone does not prepare an organization for cascading incidents.</div>
+        <div class="item"><span class="label">Opinion:</span> Reusability of large launch vehicles is strategically important because repeat capture and refuelling could alter the economics of orbit-bound infrastructure.</div>
+        <p class="reflection"><strong>Reflection:</strong> Classify work by oracle strength. Preserve human ownership of architecture. Reinvest implementation capacity in reliability. Delete unnecessary complexity. Keep operational context current.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>🔮 Predictions to track</h2>
+        <div class="item"><span class="label">Prediction:</span> Highly tractable, domain-specific software work may support near-complete autonomy before general application development does.</div>
+        <div class="item"><span class="label">Prediction:</span> No stable universal process for agentic engineering will emerge soon because organizations still need to discover their own evidence, controls, and operating patterns.</div>
+        <div class="item"><span class="label">Prediction:</span> Human direction and evaluation will remain necessary as models improve, with the frontier shifting rather than disappearing.</div>
+        <div class="item"><span class="label">Prediction:</span> Captured heavy launch vehicles could eventually be refuelled and flown repeatedly, subject to demonstrated refurbishment speed, reliability, payload performance, and regulation.</div>
+        <p class="reflection"><strong>Reflection:</strong> Target autonomy at highly verifiable domains. Measure agent performance on novel work. Track turnaround and relaunch evidence. Keep human escalation authority explicit.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>🛠️ Practical workflows</h2>
+        <ul>
+          <li><strong>Evidence-gated issue operations:</strong> grant an agent authority to investigate incoming issues, reproduce them, draft a fix, and assign priority; escalate when reproduction is absent, severity conflicts with evidence, or the affected area is critical.</li>
+          <li><strong>Cross-model change review:</strong> send important diffs and design proposals to independent reviewers, cluster their findings, and have an accountable engineer resolve material disagreements.</li>
+          <li><strong>Option-generation before commitment:</strong> ask agents for several implementations or API shapes, test the most plausible alternatives, and make the final trade-off deliberately.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>⚠️ Caveats</h2>
+        <ul>
+          <li><span class="caution">Incomplete evidence:</span> reported agent reliability and issue-volume results are anecdotal and may not transfer to another repository, team, or incident profile.</li>
+          <li><span class="risk">Verification gap:</span> a passing generated test suite does not establish that the implementation meets user needs or handles production conditions.</li>
+          <li><span class="caution">Spaceflight uncertainty:</span> the reported capture and its claimed implications need independent confirmation, and rapid operational reuse has not been established by the available information.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>🚀 Build something ambitious</h2>
+        <div class="item">
+          <h3>Autonomous reliability desk for B2B software</h3>
+          <p><strong>Outcome:</strong> turn customer-reported failures into prioritized, evidence-backed repairs fast enough to improve retention and reduce engineering interruption.</p>
+          <p><strong>Workflow:</strong> ingest tickets and telemetry; deduplicate and classify reports; reproduce failures in an isolated environment; generate candidate fixes; run regression and integration checks; obtain cross-model review; route qualified changes through deployment; observe production signals; feed outcomes back into the triage policy and knowledge base.</p>
+          <p><strong>Capabilities connected:</strong> coding agents, browser and runtime automation, test infrastructure, observability, issue tracking, customer communications, deployment tools, and a durable repository of incidents and outcomes.</p>
+          <p><strong>First meaningful milestone:</strong> close a defined class of reproducible customer defects from intake through tested patch with measurable time-to-resolution and false-priority rates.</p>
+        </div>
+        <div class="item">
+          <h3>Living engineering context graph</h3>
+          <p><strong>Outcome:</strong> give agents and operators accurate, current knowledge of system scale, dependencies, assumptions, ownership, and recent behavior instead of static documentation that decays.</p>
+          <p><strong>Workflow:</strong> continuously reconcile code, schemas, infrastructure, incident records, runbooks, and operational metrics; identify contradictions; attach current evidence to architecture decisions; provide task-specific context to planning and implementation agents; record whether the resulting changes improved outcomes.</p>
+          <p><strong>Capabilities connected:</strong> repository analysis, data cataloging, observability queries, retrieval, agent planning, policy checks, and feedback from incidents and delivery metrics.</p>
+          <p><strong>First meaningful milestone:</strong> detect and correct a material stale assumption before it produces an incorrect engineering recommendation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>⚡ Fast builds to try</h2>
+        <ul>
+          <li><strong>Reproduction-test bot:</strong> connect an agent to one bug label and ask it to turn each report into a minimal failing test; get a queue of issues ranked by reproducibility.</li>
+          <li><strong>Diff-review ensemble:</strong> submit one consequential pull request to two different models with the same review rubric; get a compact comparison of overlapping and unique concerns.</li>
+          <li><strong>Assumption freshness check:</strong> have an agent compare a runbook’s stated scale figures against current metrics; get a list of documents that need factual updates.</li>
+          <li><strong>API alternative shootout:</strong> ask an agent for five interfaces for a pending feature and write small usage examples; get concrete trade-offs before implementation begins.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="measure">
+        <h2>🧠 The author's perspective</h2>
+        <p>The author believes that today’s signals align with the view that increasingly autonomous software development and operations depend on a capable runtime, durable instructions, integrations, current data, and carefully scoped authority rather than isolated chat tasks. Evidence-gated issue handling demonstrates how agents can run a planning, reproduction, implementation, and evaluation loop when success is observable, while cross-model review and continuously maintained operating context support coordinated groups of agents with distinct roles. The emphasis on human judgment for architecture, user understanding, and exceptional conditions also aligns with an operating model in which AI proceeds by default, escalates when it needs real-world help or uncertain judgment, and learns from recorded outcomes to build reusable operational skill.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>None of this content is sponsored.</div>
+    <a class="github" href="https://github.com/coodeex/know-today" aria-label="Know Today on GitHub">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 4.73c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+    </a>
+  </footer>
+</body>
+</html>
