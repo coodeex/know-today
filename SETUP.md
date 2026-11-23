@@ -4,6 +4,10 @@
 
 This first source integration uses [`youtube-transcript-api`](https://github.com/jdepoix/youtube-transcript-api) to retrieve public YouTube captions (including auto-generated captions when available).
 
+Before generating a public briefing, Know Today independently researches concrete claims with Gemini Google Search grounding. Copy the private `.env` file created in the project root and set `GOOGLE_API_KEY` to a Gemini API key with Google Search grounding access. The key is required: a briefing is not rendered or published without the grounded-web evidence pass. The public page links only to the independently discovered web evidence, never to the source videos.
+
+The regular daily budget is eight grounded web searches, chosen from the most concrete claims. `--max-web-searches` can raise that budget for an unusually dense briefing, but it has a hard ceiling of 25. Each request has a timeout and the run records the resulting private evidence manifest under `output/youtube/runs/`.
+
 ```sh
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt

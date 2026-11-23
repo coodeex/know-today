@@ -24,6 +24,7 @@ DEFAULT_OUTPUT = PROJECT_ROOT / "output" / "youtube"
 DEFAULT_DOCS = PROJECT_ROOT / "docs"
 EXTRACT_PROMPT = PROJECT_ROOT / "prompts" / "extract_youtube_learnings.md"
 RENDER_PROMPT = PROJECT_ROOT / "prompts" / "render_youtube_briefing.md"
+RESEARCH_SCRIPT = PROJECT_ROOT / "scripts" / "research_briefing_claims.py"
 TELEGRAM_CREDENTIALS_PATH = Path.home() / "Library/Application Support/plan-bot/credentials"
 DEFAULT_PUBLIC_BASE_URL = "https://coodeex.github.io/know-today"
 TELEGRAM_NOTIFICATION_DELAY_SECONDS = 5 * 60
@@ -128,9 +129,27 @@ def extract_learnings(transcript_path: Path, learning_path: Path) -> None:
     run_codex(prompt, learning_path)
 
 
-def render_briefing(learnings_dir: Path, briefing_path: Path, briefing_date: str) -> None:
+def research_briefing_claims(learnings_dir: Path, evidence_path: Path, max_searches: int) -> None:
+    """Require independently grounded web evidence before rendering a public briefing."""
+    subprocess.run(
+        [
+            sys.executable,
+            str(RESEARCH_SCRIPT),
+            "--learnings-dir",
+            str(learnings_dir),
+            "--output",
+            str(evidence_path),
+            "--max-searches",
+            str(max_searches),
+        ],
+        check=True,
+    )
+
+
+def render_briefing(learnings_dir: Path, evidence_path: Path, briefing_path: Path, briefing_date: str) -> None:
     prompt = RENDER_PROMPT.read_text(encoding="utf-8").format(
         learnings_dir=learnings_dir,
+        evidence_path=evidence_path,
         briefing_date=briefing_date,
     )
     run_codex(prompt, briefing_path)
@@ -335,9 +354,12 @@ def main() -> int:
     parser.add_argument("--docs-dir", type=Path, default=DEFAULT_DOCS)
     parser.add_argument("--force", action="store_true", help="Treat the latest video from every channel as new and publish a fresh briefing.")
     parser.add_argument("--no-publish", action="store_true", help="Generate a briefing but do not update GitHub Pages or Git.")
+    parser.add_argument("--max-web-searches", type=int, default=8, help="Gemini grounded web searches for this briefing (default 8; hard maximum 25).")
     args = parser.parse_args()
 
     try:
+        if not 1 <= args.max_web_searches <= 25:
+            raise ValueError("--max-web-searches must be between 1 and 25.")
         proxies = proxy_settings()
         channels = load_channels(args.subscriptions)
         videos_dir = args.output_dir / "videos"
@@ -387,7 +409,9 @@ def main() -> int:
         briefing_date = f"{generated_at:%B} {generated_at.day}, {generated_at:%Y}"
         public_briefing_name = f"{timestamp}.html"
         briefing_path = args.output_dir / "briefings" / f"{timestamp}.html"
-        render_briefing(run_learnings_dir, briefing_path, briefing_date)
+        evidence_path = run_learnings_dir.parent / "evidence.json"
+        research_briefing_claims(run_learnings_dir, evidence_path, args.max_web_searches)
+        render_briefing(run_learnings_dir, evidence_path, briefing_path, briefing_date)
         print(f"Briefing: {briefing_path}")
         if args.no_publish:
             print("Skipping GitHub Pages publication (--no-publish).")
