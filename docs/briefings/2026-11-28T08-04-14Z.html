@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know Today — November 28, 2026</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #16202a;
+      --muted: #556372;
+      --border: #d9e1ea;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b42318;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    .card {
+      margin-bottom: 14px;
+      padding: 18px 50px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card);
+    }
+    .card > * { max-width: 700px; }
+    h1, h2, h3 { margin: 0 0 10px; line-height: 1.3; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 15px; }
+    p { margin: 8px 0; }
+    ul, ol { margin: 8px 0 8px 22px; padding: 0; }
+    li { margin: 4px 0; }
+    a { color: var(--accent); }
+    time, .muted { color: var(--muted); }
+    time { display: block; font-size: 13px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      padding: 3px 10px;
+      border: 1px solid #cbdaf4;
+      border-radius: 999px;
+      background: #edf3ff;
+      color: #173f91;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .caveat { color: var(--muted); }
+    footer { padding: 8px 0 16px; color: var(--muted); text-align: center; font-size: 12px; }
+    footer a { display: inline-flex; margin-top: 6px; color: var(--muted); }
+    footer svg { width: 18px; height: 18px; fill: currentColor; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px; text-align: left; vertical-align: top; border: 1px solid var(--border); }
+    th { background: #f3f6fa; }
+    code { padding: 1px 4px; border: 1px solid var(--border); border-radius: 6px; background: #f3f6fa; }
+    pre { overflow: auto; padding: 12px; border-radius: 6px; background: #0b1020; color: #dbe7ff; }
+    pre code { padding: 0; border: 0; background: transparent; }
+    @media (max-width: 600px) {
+      body { padding: 16px; }
+      .card { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body><nav data-know-today-archive style="max-width:800px;margin:16px auto 0;padding:0 24px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><a href="index.html" style="color:#1d4ed8;text-underline-offset:3px">← All briefings</a></nav>
+  <div class="container">
+    <header class="card">
+      <h1>Know Today</h1>
+      <time datetime="2026-11-28">November 28, 2026</time>
+    </header>
+
+    <section class="card" aria-label="Topics">
+      <div class="tags">
+        <span class="tag">Microrobotics</span>
+        <span class="tag">Onboard sensing</span>
+        <span class="tag">Optical flow</span>
+        <span class="tag">Sensor fusion</span>
+        <span class="tag">Flight control</span>
+      </div>
+    </section>
+
+    <main>
+      <section class="card">
+        <h2>👀 Keep an eye on</h2>
+        <ul>
+          <li><a href="https://www.unite.ai/mit-microrobot-flies-without-motion-capture-using-onboard-sensors/">MIT’s insect-scale flying robot</a> estimates motion onboard without an external motion-capture system.</li>
+          <li>Its sensing package combines optical flow over the surface below, inertial measurements and downward distance sensing.</li>
+          <li>The research prototype still needs a power tether and human high-level steering, even though flight stabilization runs onboard.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>🚀 Build something ambitious</h2>
+        <h3>An autonomous experimentation system for tiny robots</h3>
+        <p>Help robotics teams find viable sensing and control designs faster by connecting simulation, hardware experiments and accumulated flight data in one research workflow.</p>
+        <p>An AI research agent could propose sensor configurations and control changes, run simulations, schedule tethered tests, compare flight logs with target stability and payload limits, and carry useful findings into the next experiment. Give it authority to choose experiments within defined hardware and test limits; evaluate each run against repeatable flight metrics and escalate equipment faults, unsafe test conditions or changes outside those limits to an operator.</p>
+        <p><strong>First meaningful milestone:</strong> Run a simulated campaign that compares several sensor and controller configurations and produces a ranked, reproducible test plan for a real robot. The MIT prototype supplies a useful research direction, not evidence that this system already exists.</p>
+      </section>
+
+      <section class="card">
+        <h2>⚡ Fast builds to try</h2>
+        <ul>
+          <li><strong>Optical-flow viewer:</strong> Ask a coding assistant to build a notebook that tracks motion between frames in a short ground-facing video; see where surface texture helps or confuses motion estimates.</li>
+          <li><strong>Payload budget:</strong> Make a spreadsheet using the reported 1.29 g robot and 244 mg electronics package; calculate how much of the total mass onboard electronics occupy.</li>
+          <li><strong>Sensor-fusion sketch:</strong> Ask an AI assistant to diagram how optical flow, an inertial sensor and a height sensor contribute to a flight estimate; get a concise map of each sensor’s role.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>🧠 The author's perspective</h2>
+        <p>The author believes that increasingly autonomous systems depend on capable runtimes, useful data and appropriate authority. MIT’s onboard motion estimation aligns with that perspective by placing sensing and computation on the machine while leaving high-level direction to a person. The author sees this as a practical example of how a system can handle operational control locally while people provide direction where it is needed.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div>None of this content is sponsored.</div>
+      <a href="https://github.com/coodeex/know-today" aria-label="Know Today on GitHub">
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38l-.01-1.49c-2.23.48-2.69-1.08-2.69-1.08-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.22.82 1.22.82.71 1.21 1.87.86 2.33.66.07-.52.28-.86.51-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.33c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+        </svg>
+      </a>
+    </footer>
+  </div>
+</body>
+</html>
